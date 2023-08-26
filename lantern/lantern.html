@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>Lantern</title>
+    <style>
+        #title{
+            color: rgb(0, 0, 0);
+            
+        }
+        #offi{
+            color: rgb(255, 255, 255);
+            font-size: smaller;
+        }
+        #line_top{
+            color: aliceblue;
+            margin-left: auto;
+        }
+        #common_txt{
+            color:rgb(178, 214, 245);
+        }
+        #atc{
+            color:rgb(39, 84, 116);
+            background-color: aliceblue;
+        }
+        html {font-size:62.5%;}
+        body {font:normal 100% Arial,sans-serif;font-size:20px; font-size:1.4rem; } 
+    </style>
+    <!--script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"-->
+</head>
+<body style="background-color: rgb(0, 0, 0)">
+    <strong><h1 id="title">Lantern Studio</strong><i id="offi"> Official Site</i></h1>
+    <hr width="auto" size="1" id="line_top">
+    <br>
+    <!--<progress value="22" max="100" id="pro"></progress>-->
+    
+    
+    <br><br>
+    <canvas id="mc" width="auto" height="300"
+	style="border:1px solid black"></canvas>
+    <h3>
+        <br><b><h1 id="common_txt">About Lantern</h1></b>
+        <h3>
+        <article id="atc">
+            Lantern Studio(以下简称LT)是2021年成立的一个小型软件制作工作室,主要提供函数,游戏等.<br><br>
+            通过LT,你可以获取我们最新的创意和产品.<br>
+            我们尽量提供便利的服务。
+        </article>
+        </h3>
+
+        <br><b><h1 id="common_txt">Join US</h1></b>
+        <h3>
+        <article id="atc">
+            <!--你可以通过向"Ayz13394622282@outlook.com"发送邮件<br>并注明年龄,姓名,性别等信息即可加入.-->
+            <br><br>
+            你可以进行网站维护或者编写函数(如果你的业余时间不多就算了)
+            <br>你至少要有:
+            <li>充足的时间</li>
+            <li>一台电脑(Win7及以上或者MAC)</li>
+            <li>最新的电脑端Edge</li>
+            <li>少量的编程基础(html,js,python或者C)</li>
+        </article>
+        </h3>
+
+        <br><b><h1 id="common_txt">Our Projects And Functions</h1></b>
+        <h3>
+        <article id="atc">
+            我们的项目或者函数一旦编写完成,将上传到Git仓库或者百度网盘,请自行下载.
+            <br>某些付费项目的购买方式待定.<br>
+        </article>
+        </h3>
+    </h3>
+    <!--
+
+        <div id="aplayer" style="display:block"></div>
+        
+    <iframe frameborder="no"
+     marginwidth="0" marginheight="0" 
+     width=330 height=86 style="display: none;"
+     src="//music.163.com/outchain/player?type=2&id=1444008704&auto=1&height=66"></iframe>-->
+    
+    
+    <strong><i id="common_txt">© 2023 Lantern,All Rights Reserved.<br><br><br><br><br><br></i></strong>
+
+</body>
+
+<script>
+    // 获取canvas元素对应的DOM对象
+	/*var canvas = document.getElementById('mc');
+	// 获取在canvas上绘图的CanvasRenderingContext2D对象
+	var ctx = canvas.getContext('2d');
+	// 设置填充颜色
+	ctx.fillStyle = '#f00';
+	// 填充一个矩形
+	ctx.fillRect(30 , 20 , 120 , 60);
+	// 设置线条颜色
+	ctx.strokeStyle = "#00f";
+	// 设置线条宽度
+	ctx.lineWidth = 10;
+	// 绘制一个矩形边框
+	ctx.strokeRect(30 , 130 , 120 , 60);
+	// 设置线条颜色
+	ctx.strokeStyle = "#0ff";
+	// 设置线条连接风格
+	ctx.lineJoin = "round";
+	// 绘制一个矩形边框
+	ctx.strokeRect(80 , 160 , 120 , 60);
+	// 设置线条颜色
+	ctx.strokeStyle = "#f0f";
+	// 设置线条连接风格
+	ctx.lineJoin = "bevel";
+	// 绘制一个矩形边框
+	ctx.strokeRect(130 , 190 , 120 , 60);*/
+</script>
+
+<script>
+    var r=0,g=0,b=0,upper=true,vary=1;;
+    function down_color(){
+        if(b-vary>=0) b=b-vary
+        else{
+            if(r-vary>=0) r=r-vary
+            else{
+                if(g-vary>=0) g=g-vary;
+                else upper=true
+            }
+        }
+    }
+    function up_color(){
+    document.getElementById('title').style="color:rgb("+r.toString()+","+g.toString()+","+b.toString()+")";
+    if(upper==true){
+        if(b+vary<=255) b=b+vary;
+        else{
+            if(r+vary<=255) r=r+vary;
+            else{
+                if(g+vary<=255) g=g+vary;
+                else upper=false
+            }
+        }
+    }
+    else down_color()
+    }
+    function flash(){
+        nIntervId = setInterval(function(){up_color()}, 1);
+    }
+    /*const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: true,                //是否附着页面底部，否为false
+        autoplay: true,             //是否自动播放，否为false,移动端不能生效
+        order: 'single',            //音频循环顺序（'list'：顺序, 'random'：随机）
+        preload: 'auto',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+        listFolded: false,          //列表默认折叠，开启为true
+        theme: '#0e64b0',           //主题颜色
+        audio: [
+            {
+            name: "冬の花",
+            artist: "宮本浩次",
+            url: "http://freetyst.nf.migu.cn/public/product4th/product36/2019/09/1820/2019%E5%B9%B402%E6%9C%8812%E6%97%A510%E7%82%B929%E5%88%86%E7%B4%A7%E6%80%A5%E5%86%85%E5%AE%B9%E5%87%86%E5%85%A5%E6%AD%A3%E4%B8%9C9%E9%A6%96/%E6%A0%87%E6%B8%85%E9%AB%98%E6%B8%85/MP3_320_16_Stero/6005661TWHD.mp3",         //歌曲源文件地址
+            cover:"https://d.musicapp.migu.cn//prod/file-service/file-down/b1899d500dda5db2da11df3efc89cba6/4b69b5c88a0cb404ec0a4e2dd76018ba/455047596fadb4477c054ba5b422f5dd"
+        }]
+    });*/
+    /*audio: [
+            {
+            name: "LAST TEXT",
+            artist: "Jake Miller",
+            url: "http://freetyst.nf.migu.cn/public/product10th/productB35/2022/03/1514/2020%E5%B9%B405%E6%9C%8801%E6%97%A513%E7%82%B947%E5%88%86%E6%89%B9%E9%87%8F%E9%A1%B9%E7%9B%AESonyOrchard456%E9%A6%96-2/%E6%A0%87%E6%B8%85%E9%AB%98%E6%B8%85/MP3_320_16_Stero/6993872K8D1140003.mp3",  
+            cover:"https://d.musicapp.migu.cn//prod/file-service/file-down01/8121e8df41a5c12f48b69aea89b71dab/0b7950be2173f4d90b519685a25f0a58/f22cf58c0332c97920df73ad93e377fa"
+        }],*/
+    flash()
+</script>

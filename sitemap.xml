@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://aryuze.github.io/others/li-Email.html</loc>
+    <loc>https://aryuze.github.io/others/li-Email/li-Email.html</loc>
+    
+    <lastmod>2023-08-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aryuze.github.io/others/li-Email/li-play.html</loc>
     
     <lastmod>2023-08-28</lastmod>
     

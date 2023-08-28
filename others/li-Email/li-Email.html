@@ -66,95 +66,77 @@
 <html>
 <head>
   <title>登录</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-    }
-
-    .login-container {
-      max-width: 400px;
-      margin: auto;
-      background-color: white;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.3);
-    }
-
-    .login-container h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .login-container h3 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .login-container label {
-      display: block;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-      box-sizing: border-box;
-      margin-bottom: 20px;
-    }
-
-    .login-container button {
-      width: 100%;
-      padding: 10px;
-      background-color: #4caf50;
-      border: none;
-      color: white;
-      cursor: pointer;
-      border-radius: 3px;
-      font-size: 16px;
-    }
-
-    .login-container button:hover {
-      background-color: #45a049;
-    }
+  <link type="text/css" rel="stylesheet" href="css/login.css" />
   </style>
 </head>
 <body>
-  <div class="login-container">
+  <div class="login-container" id="container1">
     <h1>登录李E-Mail.</h1>
     <h3>快登录李E-Mail吧,老师嗓子都哑了.</h3>
-    <form>
+    
       <label for="username">用户名:</label>
       <input type="text" id="username" name="username" required>
 
       <label for="password">密码:</label>
       <input type="password" id="password" name="password" required>
-
-      <button type="submit" onclick="check()">登录</button>
-    </form>
+    
+    <div id="wrong_orgin" style="display: none;">
+      <h1 id="title"></h1><h3 id="subtitle"></h3>
+      <img src="image/l1m_sad.jpg" />
+      <button onclick="off()">关闭</button>
+    </div>
+    <button onclick="check()">登录</button>
   </div>
+  <div class="container2" id="container2" style="display: none;">
+    <h1>登录成功(喜)</h1>
+    <h3><i>*请选择以下任意一项以继续</i></h3>
+    <button onclick="check()">L1m射击小游戏.</button>
+  </div>
+  
 </body>
 </html>
 
-<script type="text/javascript">
+<script language="javascript" type="text/javascript">
+    function off(){
+      var error = document.getElementById("wrong_orgin");
+      error.style.display = 'none';
+    }
     function check(){
       let inputs1 = document.getElementById("username").value,inputs2 = document.getElementById("password").value;
-      datas=["李一妹","L1m","田所浩二","114514","杰哥","1919810"]
-      if (datas.includes(inputs1)){
-        if (inputs2==datas[datas.indexOf(inputs1)+1]){
-          alert("登录成功(喜)")
-        }
-        else alert("密码错误"+'\n'+
-        "这么简单的玩意都记不住啊,上课听了吗!?")
+      datas=["李一妹","L1m",
+      "田所浩二","114514",
+      "杰哥","1919810",
+      "李一妹","l1m",
+      "1","1"
+    ]
+    if (datas.includes(inputs1)){
+    var error = document.getElementById("wrong_orgin");
+    if (inputs2==datas[datas.indexOf(inputs1)+1]){
+      var node = document.getElementById("container1");
+      if (node.parentNode) {
+        node.parentNode.removeChild(node);
       }
-      else alert("用户名错误"+'\n'
-      +"你说我辛苦教你们这么长时间连我名都记不住啊!")
+      var container = document.getElementById("container2");
+      container.style='display: block';
+    }
+    else{
+      error.style.display = 'block';
+      var t1 = document.getElementById("title");
+      var t2 = document.getElementById("subtitle");
+      t1.textContent='密码错误(大悲)'
+      t2.textContent='你个死崽子!密码怎么还给忘了!'
+    }
+    }
+    else{
+      var error = document.getElementById("wrong_orgin");
+      error.style.display = 'block';
+      var t1 = document.getElementById("title");
+      var t2 = document.getElementById("subtitle");
+      t1.textContent='用户名错误(大悲)'
+      t2.textContent='你说老师教你们这么多年怎么还把老师名给忘了呢(大嘘)'}
   }
-</script> 
+</script>
+ 
       <!-- reward -->
       
     </div>
@@ -218,7 +200,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://aryuze.github.io/others/li-Email.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://aryuze.github.io/others/li-Email/li-Email.html" alt="微信分享二维码">
     </div>
 </div>
 

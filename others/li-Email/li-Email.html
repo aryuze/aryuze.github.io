@@ -90,13 +90,16 @@
   <div class="container2" id="container2" style="display: none;">
     <h1>登录成功(喜)</h1>
     <h3><i>*请选择以下任意一项以继续</i></h3>
-    <button onclick="check()">L1m射击小游戏.</button>
+    <button onclick="run()">L1m射击小游戏.</button>
   </div>
   
 </body>
 </html>
 
 <script language="javascript" type="text/javascript">
+    function run(){
+      window.location = "li-play.html";
+  }
     function off(){
       var error = document.getElementById("wrong_orgin");
       error.style.display = 'none';
@@ -124,7 +127,7 @@
       var t1 = document.getElementById("title");
       var t2 = document.getElementById("subtitle");
       t1.textContent='密码错误(大悲)'
-      t2.textContent='你个死崽子!密码怎么还给忘了!'
+      t2.textContent='就整别的科了不整语文了!(大嘘)'
     }
     }
     else{

@@ -1,7 +1,7 @@
 <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
 body {
     font-family: Arial, sans-serif;
-    background-image: url("../image/bg_select.jpg") ;
+    background-image: url("../image/bg-select.jpg") ;
     
 }
 
@@ -38,29 +38,32 @@ body {
 #wrong_orgin h1{
     position: absolute;
     left:20%;
-    top: 5px;
-    font-size: 16px;
+    top: 2px;
+    font-size: 20px;
+    color: aliceblue;
 }
 
 #wrong_orgin h3{
     position: absolute;
     left:20%;
+    right:20%;
     top: 34px;
-    font-size: 8px;
+    font-size: 14px;
+    color: aliceblue;
 }
 
 #wrong_orgin button{
     position: absolute;
-    right: 5px;
+    right: 2px;
     top: 5px;
-    width: 16%;
+    width: 8%;
     height: auto;
     background-color: #920d0d;
     border: none;
     color: white;
     cursor: pointer;
     border-radius: 3px;
-    font-size: 4px;
+    font-size: 1px;
 }
 
 .container2 button{

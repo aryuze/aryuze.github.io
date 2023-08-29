@@ -4,16 +4,7 @@
   <url>
     <loc>https://aryuze.github.io/others/li-Email/li-Email.html</loc>
     
-    <lastmod>2023-08-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://aryuze.github.io/others/li-Email/li-play.html</loc>
-    
-    <lastmod>2023-08-28</lastmod>
+    <lastmod>2023-08-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -21,6 +12,15 @@
   
   <url>
     <loc>https://aryuze.github.io/2023/03/21/test1/</loc>
+    
+    <lastmod>2023-08-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aryuze.github.io/others/li-Email/li-play.html</loc>
     
     <lastmod>2023-08-28</lastmod>
     
@@ -130,7 +130,7 @@
 
   <url>
     <loc>https://aryuze.github.io/</loc>
-    <lastmod>2023-08-28</lastmod>
+    <lastmod>2023-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

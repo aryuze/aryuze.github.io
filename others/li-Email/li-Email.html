@@ -3,24 +3,6 @@
 <head>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
   <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-  <div id='aplayer'></div>
-  <script>
-      var ap = new APlayer
-      ({
-          element: document.getElementById('aplayer'),
-          autoplay: true,
-          fixed: true,
-          mini: true,
-          preload: 'auto',
-          audio: {
-              title: '千万不要点击啊啊啊啊',
-              author: '李田所',
-              url: 'https://m10.music.126.net/20230829191239/02b97afd2df3eb0516651f06ba177656/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/13291006911/d653/02ca/bc86/41e5ab2ee7eb62994a9b4ca9b3957dcf.mp3',
-              cover: 'https://p2.music.126.net/OkuaaRkEPjUV4lgyKfnSgw==/109951168018848467.jpg'
-          }
-      });
-      ap.init();
-  </script>
   <title>登录</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
   <style>
@@ -33,6 +15,7 @@
   </style>
 </head>
 <body>
+  <div id='aplayer'></div>
   <div class="login-container" id="container1">
     <h1>登录李E-Mail.</h1>
     <h3>快登录李E-Mail吧,老师嗓子都哑了.</h3>
@@ -101,4 +84,20 @@
       t1.textContent='用户名错误(大悲)'
       t2.textContent='你说老师教你们这么多年怎么还把老师名给忘了呢(大嘘)'}
   }
+
+      var ap = new APlayer
+      ({
+          element: document.getElementById('aplayer'),
+          autoplay: true,
+          fixed: true,
+          mini: true,
+          preload: 'auto',
+          audio: {
+              title: '千万不要点击啊啊啊啊',
+              author: '李田所',
+              url: 'https://m10.music.126.net/20230829191239/02b97afd2df3eb0516651f06ba177656/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/13291006911/d653/02ca/bc86/41e5ab2ee7eb62994a9b4ca9b3957dcf.mp3',
+              cover: 'https://p2.music.126.net/OkuaaRkEPjUV4lgyKfnSgw==/109951168018848467.jpg'
+          }
+      });
+      ap.init();
 </script>

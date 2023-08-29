@@ -1,33 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- require APlayer -->
   <link rel="stylesheet" href="css/APlayer.min.css">
   <script src="js/APlayer.min.js"></script>
-  <script>
-  <div id='aplayer'></div>
-  var ap = new APlayer
-      ({
-          element: document.getElementById('aplayer'),
-          autoplay: true,
-          fixed: true,
-          mini: true,
-          preload: 'auto',
-          audio: {
-              title: '千万不要点击啊啊啊啊',
-              author: '李田所',
-              url: 'https://m10.music.126.net/20230829191239/02b97afd2df3eb0516651f06ba177656/ymusic/obj/w5zDlMODwrDDiGjCn8Ky/13291006911/d653/02ca/bc86/41e5ab2ee7eb62994a9b4ca9b3957dcf.mp3',
-              cover: 'https://p2.music.126.net/OkuaaRkEPjUV4lgyKfnSgw==/109951168018848467.jpg'
-          }
-    });
-  ap.init();
-  </script>
+  <!-- require MetingJS -->
+  <script src="js/Meting.min.js"></script>
+
+  <meting-js
+    server="netease"
+    type="song"
+    id="1923947296"
+    mini="true"
+    autoplay="true">
+  </meting-js>
+
   <title>登录</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-  <style>
-    body{
-      background-image: url("../image/bg-select.jpg");
-    }
-  </style>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
   <link type="text/css" rel="stylesheet" href="css/login.css" />
   </style>

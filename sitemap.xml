@@ -2,27 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://aryuze.github.io/others/li-Email/li-Email.html</loc>
-    
-    <lastmod>2023-08-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://aryuze.github.io/2023/03/21/test1/</loc>
     
     <lastmod>2023-08-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://aryuze.github.io/others/li-Email/li-play.html</loc>
-    
-    <lastmod>2023-08-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -74,6 +56,15 @@
   </url>
   
   <url>
+    <loc>https://aryuze.github.io/lantern/lantern.html</loc>
+    
+    <lastmod>2023-07-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://aryuze.github.io/programs/2023.3.24.html</loc>
     
     <lastmod>2023-07-16</lastmod>
@@ -92,6 +83,15 @@
   </url>
   
   <url>
+    <loc>https://aryuze.github.io/lantern/SeasonalMarket.html</loc>
+    
+    <lastmod>2023-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://aryuze.github.io/configuration/config_main.json</loc>
     
     <lastmod>2023-05-04</lastmod>
@@ -104,6 +104,15 @@
     <loc>https://aryuze.github.io/others/cmd.html</loc>
     
     <lastmod>2023-04-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aryuze.github.io/lantern/about.html</loc>
+    
+    <lastmod>2023-04-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

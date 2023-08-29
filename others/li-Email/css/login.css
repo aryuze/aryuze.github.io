@@ -1,4 +1,9 @@
 <link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>
+
+#sss{
+    color: #0787dc;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-image: url("../image/bg-select.jpg") ;

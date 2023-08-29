@@ -2,8 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url("../image/bg-select.jpg") ;
-    
 }
+
 
 .login-container {
     max-width: 400px;
@@ -38,7 +38,7 @@ body {
 #wrong_orgin h1{
     position: absolute;
     left:20%;
-    top: 2px;
+    top: 0px;
     font-size: 20px;
     color: aliceblue;
 }
@@ -48,7 +48,7 @@ body {
     left:20%;
     right:20%;
     top: 34px;
-    font-size: 14px;
+    font-size: 50%;
     color: aliceblue;
 }
 
@@ -56,14 +56,14 @@ body {
     position: absolute;
     right: 2px;
     top: 5px;
-    width: 8%;
+    width: 15%;
     height: auto;
     background-color: #920d0d;
     border: none;
     color: white;
     cursor: pointer;
     border-radius: 3px;
-    font-size: 1px;
+    font-size: 16px;
 }
 
 .container2 button{

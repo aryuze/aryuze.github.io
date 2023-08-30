@@ -53,10 +53,25 @@
       
 <section class="cover">
     
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="https://wallpapercave.com/wp/4pFzM9g.jpg" alt="image frame" />
-    </div>
+    <video width="100%" controls="false" autoplay="true">
+      <source src="/images/yourname.mp4" type="video/mp4">
+    </video>
+    <style>
+      .video{
+        max-width: 100%;
+        max-height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+      }
+    </style>
+    <script>
+      const video = document.querySelector('video');
+
+      video.addEventListener('loadedmetadata', () => {
+        video.controls = false; // 禁用控制栏
+      });
+    </script>
+  
     <div class="cover-inner text-center text-white">
       <h1><a href="/">Aryuze&#39;s site</a></h1>
       <div id="subtitle-box">
@@ -99,40 +114,6 @@
 <div id="main">
   <section class="outer">
   
-  
-  
-<div class="notice" style="margin-top:50px">
-    <i class="ri-heart-fill"></i>
-    <div class="notice-content">AllStarGame2正在加速制作!</div>
-</div>
-
-
-<style>
-    .notice {
-        padding: 20px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-    }
-
-    .notice i {
-        float: left;
-        color: #999;
-        font-size: 16px;
-        padding-right: 10px;
-        vertical-align: middle;
-        margin-top: -2px;
-    }
-
-    .notice-content {
-        display: initial;
-        vertical-align: middle;
-    }
-</style>
   
   <article class="articles">
     

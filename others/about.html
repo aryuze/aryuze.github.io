@@ -72,10 +72,15 @@
        
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="有关于我的一些介绍"><a href="#有关于我的一些介绍" class="headerlink" title="有关于我的一些介绍:"></a>有关于我的一些介绍:</h2><p>本人为一名普通的初中牲,2019年开始接触编程.</p>
+  <link rel="stylesheet" href="li-Email/css/APlayer.min.css">
+<script src="li-Email/js/APlayer.min.js"></script>
+<script src="li-Email/js/Meting.min.js"></script>
+
+
+
+<h2 id="有关于我的一些介绍"><a href="#有关于我的一些介绍" class="headerlink" title="有关于我的一些介绍:"></a>有关于我的一些介绍:</h2><p>本人为一名普通的初中牲,2019年开始接触编程.</p>
 <p>我比较擅长python,并且略微了解:<br>· html<br>· C++<br>· C#<br>· CSS<br>· JS<br>· MD(这玩意都不用学所以可以不算)</p>
-<p>除编程之外,我还喜欢小提琴,画画等(有时候也挺喜欢数学的)<br><i id="sorry_ios" style="display:none;">*抱歉,ios端目前无法播放音频.</i><br><input id="button" type="button" value="关闭音乐" onclick="exit_music();"></p>
-<p>如果非紧急情况,<strong>请不要联系我</strong><br>如果加我微信请注明原因(我大概率是不会通过请求的)<br><code id="code">#Code >>></code></p>
+<p>除编程之外,我还喜欢小提琴,画画等(有时候也挺喜欢数学的)<br>当然也经常听听歌或者看看电影啥的.<br>打算以后弄一个资源网站.<br><meting-js server="netease" type="song" id="812400" mini="false" order="random" autoplay="true" volume="0.7"><br></meting-js><br>如果非紧急情况,<strong>请不要联系我</strong><br>如果加我微信请注明原因(我大概率是不会通过请求的)<br><code id="code">#Code >>></code></p>
 <h2 id="Appreciate-🌹"><a href="#Appreciate-🌹" class="headerlink" title="Appreciate 🌹"></a>Appreciate 🌹</h2><p>在学习编程的过程中,我曾遇到了<b>很多困难</b><br>但是通过几个月的艰苦研究,我创建了此网站,<b>毕竟比较方便上传程序以及显示更新通知(当然了我也可以用这个网站赚钱)</b></p>
 <p>非常感谢我的<b>父母,老师和一直陪在我身边的朋友们</b><br>如果没有他们中的任何一人,这个网站都不会建成。</p>
 <p>网站实质上为个人博客网站,采用的主题为ayer.<br>包含html5,javascript,css等.</p>
@@ -94,21 +99,7 @@
 <h2 id="向我-网站或者Lantern捐款"><a href="#向我-网站或者Lantern捐款" class="headerlink" title="向我,网站或者Lantern捐款"></a>向我,网站或者Lantern捐款</h2></div>
 
 <p>如果愿意的话,你可以向我,网站或者Lantern捐款或打赏.<br><i>*如果长按无法识别,可以发送到微信再长按识别.</i><br><select id="slt"><br>    <option value="no">资金缺乏</option><br>    <option value="6">Donate 6 RMB🌹</option><br>    <option value="10">Donate 10 RMB🫰</option><br>    <option value="15">Donate 15 RMB🎉</option><br></select><br><img id="imgs" src></p>
-<p><audio src="https://www.aigei.com/s?q=%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF%E3%83%AB+%28%E7%81%AB%E8%8A%B1%29#" id="aud" autoplay="autoplay" controls="controls" preload="auto" style="display: none;"></audio></p>
 <script>
-    var a = navigator.userAgent;
-    var isiOS = !!a.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-
-    function exit_music(){
-        document.getElementById("aud").src='';
-    }
-
-    if(isiOS ){
-        document.getElementById("button").style='display: none;';
-        document.getElementById("sorry_ios").style='display: true';
-        exit_music()
-    }
-
     function check(){
         let slt_=document.getElementById("slt");
         if(slt_.value=="no") document.getElementById("imgs").src="";

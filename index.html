@@ -52,23 +52,38 @@
     <main class="content on">
       
 
-<section class="cover">
+<section class="cover-frame">
     
 
-    <img src="" id="imgs">
+    <div class="bg-box">
+      <img src="" alt="" id="imgs" />
+    </div>
+
     <style>
       .section{
         position: relative;
         width: 100%;
         height: 100%;
       }
-      .section img{
+      .bg-box{
         position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      .bg-box img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
         overflow: hidden;
+      }
+      #txt{
+        position: absolute;
+        margin: auto;
+        text-align:center;
       }
     </style>
       
-    <div class="cover-inner text-center text-white">
+    <div id="txt" class="cover-inner text-center text-white">
       <h1><a href="/">Aryuze&#39;s site</a></h1>
       <div id="subtitle-box">
         
@@ -349,10 +364,6 @@
     
     <li class="nav-item">
       <a class="nav-item-link" href="/programs/index">Program</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/lantern/lantern.html">Lantern</a>
     </li>
     
     <li class="nav-item">

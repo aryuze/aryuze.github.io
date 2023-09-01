@@ -24,26 +24,35 @@
   <div class="login-container" id="container1">
     <h1>登录李E-Mail.</h1>
     <h3>快登录李E-Mail吧,老师嗓子都哑了.</h3>
-    
+    <form>
       <label for="username">用户名:</label>
       <input type="text" id="username" name="username" required>
 
       <label for="password">密码:</label>
       <input type="password" id="password" name="password" required>
-    
+      <button type="submit" onclick="check()">登录</button>
+    </form>
     <div id="wrong_orgin" style="display: none;">
       <h1 id="title"></h1><h3 id="subtitle"></h3>
       <img src="image/l1m_sad.jpg" />
       <button onclick="off()">关闭</button>
     </div>
-    <button onclick="check()">登录</button>
-  </div>
-  <div class="container2" id="container2" style="display: none;">
-    <h1>登录成功(喜)</h1>
-    <h3><i>*请选择以下任意一项以继续</i></h3>
-    <button onclick="run()">L1m射击小游戏.</button>
+    
   </div>
   
+  <div id="recap-container" style="display: none;">
+    <img src="image/recapacha.jfif">
+    <h2>进行人机身份验证</h2>
+    <h3>由recapacha提供技术支持.</h3>
+    <box id="clickbar" data-click="clickbar"></box>
+  </div>
+
+  </div>
+  <div class="recap" id="recap" style="display: none;">
+
+  </div>
+
+
 </body>
 </html>
 
@@ -61,20 +70,18 @@
       "田所浩二","114514",
       "杰哥","1919810",
       "李一妹","l1m",
-      "1","1"
+      "",""
     ]
     if (datas.includes(inputs1)){
     var error = document.getElementById("wrong_orgin");
     if (inputs2==datas[datas.indexOf(inputs1)+1]){
-      var node = document.getElementById("container1");
-      if (node.parentNode) {
+      /*if (node.parentNode) {
         node.parentNode.removeChild(node);
-      }
-      var container = document.getElementById("container2");
+      }*/
+      var container = document.getElementById("recap-container");
       container.style='display: block';
     }
     else{
-      error.style.display = 'block';
       var t1 = document.getElementById("title");
       var t2 = document.getElementById("subtitle");
       t1.textContent='密码错误(大悲)'
@@ -87,7 +94,13 @@
       var t1 = document.getElementById("title");
       var t2 = document.getElementById("subtitle");
       t1.textContent='用户名错误(大悲)'
-      t2.textContent='你说老师教你们这么多年怎么还把老师名给忘了呢(大嘘)'}
+      t2.textContent='你说老师教你们这么多年怎么还把老师名给忘了呢(大嘘)'
+    }
   }
-
+  document.getElementById("bigBox").addEventListener("click",function(event){
+        if (event.target=='clickbar'){
+          var container = document.getElementById("container2");
+          container.style='display: none';
+        };
+  },false);
 </script>

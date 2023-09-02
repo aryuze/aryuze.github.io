@@ -8,7 +8,7 @@ body {
 /*recap check*/
 #recap-container{
     position: relative;
-    max-width: 400px;
+    max-width: 320px;
     border-radius: 10px;
     height: 60px;
     display :'block';
@@ -49,7 +49,56 @@ body {
     outline: 2px solid;
     outline-color: #545455;
 }
-/*recap*/
+/*recap main*/
+.recap{
+    position: relative;
+    max-width: 350px;
+    height: 450px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+}
+.recap #upper{
+    position: absolute;
+    left:2%;
+    right: 2%;
+    top: 2%;
+    height: 100px;
+    background-color:#0787dc;
+}
+.recap #line1{
+    position: absolute;
+    left:5%;
+    top: 0%;
+    color: aliceblue;
+    font-size: smaller;
+}
+.recap #main_tag{
+    position: absolute;
+    left:5%;
+    top: 8%;
+    color: aliceblue;
+    font-size:xx-large;
+}
+.recap #line2{
+    position: absolute;
+    left:5%;
+    bottom: 0%;
+    color: aliceblue;
+    font-size: smaller;
+}
+.recap #p1,#p2,#p3,#p4,#p5,#p6,#p7,#p8,#p9{width: 30%;height: 105px;}
+.recap #p1{position: absolute;left:2%;top:26%;}
+.recap #p2{position: absolute;left:35%;top:26%;}
+.recap #p3{position: absolute;left:68%;top:26%;}
+
+.recap #p4{position: absolute;left:2%;top:50%;}
+.recap #p5{position: absolute;left:35%;top:50%;}
+.recap #p6{position: absolute;left:68%;top:50%;}
+
+.recap #p7{position: absolute;left:2%;top:74%;}
+.recap #p8{position: absolute;left:35%;top:74%;}
+.recap #p9{position: absolute;left:68%;top:74%;}
+
 
 
 .login-container {

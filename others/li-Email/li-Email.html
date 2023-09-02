@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="css/APlayer.min.css">
   <script src="js/APlayer.min.js"></script>
   <script src="js/Meting.min.js"></script>
+  <script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
   <meting-js
     server="netease"
     type="song"
@@ -49,6 +50,15 @@
 
   </div>
   <div class="recap" id="recap" style="display: none;">
+    <div id="upper">
+      <h3 id="line1">请选择下列包含</h3>
+      <h1 id="main_tag"></h1>
+      <h3 id="line2">的图片</h3>
+    </div>
+
+    <img id="p1" /><img id="p2" /><img id="p3" />
+    <img id="p4" /><img id="p5" /><img id="p6" />
+    <img id="p7" /><img id="p8" /><img id="p9" />
 
   </div>
 
@@ -57,6 +67,9 @@
 </html>
 
 <script language="javascript" type="text/javascript">
+  var recaps=0,recap_whether=false;
+  //globalThis(recap_whether)
+  //globalThis(recaps)
     function run(){
       window.location = "li-play.html";
   }
@@ -97,10 +110,47 @@
       t2.textContent='你说老师教你们这么多年怎么还把老师名给忘了呢(大嘘)'
     }
   }
-  document.getElementById("bigBox").addEventListener("click",function(event){
-        if (event.target=='clickbar'){
-          var container = document.getElementById("container2");
-          container.style='display: none';
-        };
-  },false);
+  
+  document.getElementById("clickbar").addEventListener("click",function(event){
+    var recapcontainer = document.getElementById("recap-container");
+    recapcontainer.style='display: none;';
+    var logincontainer = document.getElementById("container1");
+    logincontainer.style='display: none;';
+    var recapmain = document.getElementById("recap");
+    recapmain.style='display: block;';
+    recap_whether=true
+    
+    function recapmainly(){
+      var all_tags=['image/csj.jpg','image/cxk.jpg','image/jiege.jpg','image/lbw.jpg','image/rick.jpg','image/xianbei.jpg','image/xiucai.jpg','image/zhuge.jpg','image/l1m_sad.jpg']
+      if (recap_whether==true){
+        if (recaps==0){
+          var ttl = document.getElementById("main_tag");
+          ttl.textContent='灯泡'
+        }
+          $(document).ready(function(){
+          var vari=1,vari_item=[],item='';
+          for(var i=0;i<all_tags.length;i++){
+            function choose(){item = all_tags[Math.floor(Math.random()*all_tags.length)];}
+            choose()
+            while(vari_item.includes(item)) choose()
+            vari_item.push(item)
+            d=document.getElementById("p"+vari.toString())
+            vari++;
+            d.src=item;
+            }
+            function checkout(){
+              if(recaps>3) window.location.replace("li-play.html")
+              else{
+                recaps++;
+            recapmainly()}
+            }
+            var all=document.getElementsByTagName('img')
+            all.addEventListener("click",checkout(),false);
+          })
+        }
+      }
+
+    recapmainly()},false);
+  console.log('1111')
+  
 </script>

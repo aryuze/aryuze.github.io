@@ -67,7 +67,7 @@
 </html>
 
 <script language="javascript" type="text/javascript">
-  var recaps=0,recap_whether=false;
+  var recaps=1,recap_whether=false;
   //globalThis(recap_whether)
   //globalThis(recaps)
     function run(){
@@ -110,23 +110,41 @@
       t2.textContent='你说老师教你们这么多年怎么还把老师名给忘了呢(大嘘)'
     }
   }
-  
-  document.getElementById("clickbar").addEventListener("click",function(event){
+  function capa_main(){
+    recap_whether=true
     var recapcontainer = document.getElementById("recap-container");
     recapcontainer.style='display: none;';
     var logincontainer = document.getElementById("container1");
     logincontainer.style='display: none;';
     var recapmain = document.getElementById("recap");
     recapmain.style='display: block;';
-    recap_whether=true
     
+    recap_info=[['灯泡','image/l1m_sad.jpg'],['下北泽明星','image/xianbei.jpg'],['好康的','image/jiege.jpg'],
+    ['玩**','image/lbw.jpg'],['Give You Up','image/rick.jpg'],['鸡','image/cxk.jpg'],['秀才','image/xiucai.jpg'],['鸡汤','image/csj.jpg']]
+    var last_recaps=[],recap_this_time='',listen_now='',listens=''//,recap_right=0
+    
+    
+    function checkout(listens){
+      if(listens.includes(recap_this_time[1])){
+          recap_whether=false
+          window.location.replace("li-play.html")
+              }
+      else{
+          alert("选择错误,请稍后重试")
+          window.location.replace("li-Email.html")             
+              }
+              }
+              
     function recapmainly(){
       var all_tags=['image/csj.jpg','image/cxk.jpg','image/jiege.jpg','image/lbw.jpg','image/rick.jpg','image/xianbei.jpg','image/xiucai.jpg','image/zhuge.jpg','image/l1m_sad.jpg']
+      
       if (recap_whether==true){
-        if (recaps==0){
-          var ttl = document.getElementById("main_tag");
-          ttl.textContent='灯泡'
-        }
+        function choose_recap(){recap_this_time = recap_info[Math.floor(Math.random()*recap_info.length)];}
+        choose_recap()
+        //while(last_recaps.includes(recap_this_time)) choose_recap()
+        //last_recaps.push(recap_this_time)
+
+          document.getElementById("main_tag").textContent=recap_this_time[0]
           $(document).ready(function(){
           var vari=1,vari_item=[],item='';
           for(var i=0;i<all_tags.length;i++){
@@ -138,19 +156,29 @@
             vari++;
             d.src=item;
             }
-            function checkout(){
-              if(recaps>3) window.location.replace("li-play.html")
-              else{
-                recaps++;
-            recapmainly()}
-            }
-            var all=document.getElementsByTagName('img')
-            all.addEventListener("click",checkout(),false);
+            
+            /*listen=document.getElementsByTagName('img')
+            console.log(Array.from(listen).slice(2,10))
+            for(var s=0;s<listen.length;s++){
+              listen_s=listen[s].toString().slice(2)
+              console.log(listen_s)*/
+          
+          document.getElementById('p1').addEventListener("click",function(event){checkout(document.getElementById('p1').src);return;},true);
+          document.getElementById('p2').addEventListener("click",function(event){checkout(document.getElementById('p2').src);return;},true);
+          document.getElementById('p3').addEventListener("click",function(event){checkout(document.getElementById('p3').src);return;},true);
+          document.getElementById('p4').addEventListener("click",function(event){checkout(document.getElementById('p4').src);return;},true);
+          document.getElementById('p5').addEventListener("click",function(event){checkout(document.getElementById('p5').src);return;},true);
+          document.getElementById('p6').addEventListener("click",function(event){checkout(document.getElementById('p6').src);return;},true);
+          document.getElementById('p7').addEventListener("click",function(event){checkout(document.getElementById('p7').src);return;},true);
+          document.getElementById('p8').addEventListener("click",function(event){checkout(document.getElementById('p8').src);return;},true);
+          document.getElementById('p9').addEventListener("click",function(event){checkout(document.getElementById('p9').src);return;},true);
           })
+          
         }
-      }
-
-    recapmainly()},false);
+      };
+      recapmainly()
+  }
+  document.getElementById("clickbar").addEventListener("click",function(event){capa_main()},false);
   console.log('1111')
   
 </script>

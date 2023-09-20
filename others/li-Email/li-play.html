@@ -2,69 +2,29 @@
 <html>
 <head>
   <title>游戏</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-    }
-
-    .login-container {
-      max-width: 400px;
-      margin: auto;
-      background-color: white;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.3);
-    }
-
-    .login-container h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .login-container h3 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .login-container label {
-      display: block;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-      box-sizing: border-box;
-      margin-bottom: 20px;
-    }
-
-    .login-container button {
-      width: 100%;
-      padding: 10px;
-      background-color: #4caf50;
-      border: none;
-      color: white;
-      cursor: pointer;
-      border-radius: 3px;
-      font-size: 16px;
-    }
-
-    .login-container button:hover {
-      background-color: #45a049;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <link type="text/css" rel="stylesheet" href="css/shootgame.css" />
 </head>
 <body>
-  
-    
+  <canvas class="Canvas"></canvas>
 </body>
 </html>
 
 <script type="text/javascript">
+    globalwidth=document.documentElement.clientWidth
+    var canvas = document.querySelector(".Canvas");
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "rgb(255, 0, 0)";
+    ctx.fillRect(0, 0, globalwidth, 150);
+		
     
+    const myImg = new Image()
+    myImg.sec = 'image/l1m_sad.jpg'
+    // 准备一个加载完毕的事件
+    myImg.onload = function () {
+        console.log(this) // 这里的 this 就是这个图片的内容
+    }
 </script>

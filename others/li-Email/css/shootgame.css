@@ -1,0 +1,12 @@
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+.canvas{
+    position: absolute;
+    width:fit-content;
+    height:"100%";
+    background-color: aliceblue ;
+}

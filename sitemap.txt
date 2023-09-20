@@ -1,7 +1,6 @@
 https://aryuze.github.io/others/about.html
 https://aryuze.github.io/2023/03/21/test1/
 https://aryuze.github.io/programs/allstar2.html
-https://aryuze.github.io/programs/index.html
 https://aryuze.github.io/others/calculator.html
 https://aryuze.github.io/programs/js_pic.html
 https://aryuze.github.io/lantern/lantern.html

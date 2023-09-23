@@ -4,7 +4,7 @@
     height: 250px;
 }
 .blocks{
-    display: block;
+    display: inline-block; 
     position: absolute;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
@@ -18,9 +18,9 @@
 
 .image{
     position: absolute;
-    left: 2%;
-    width: 96%;
-    height: 75%;
+    left: 10%;
+    width: 80%;
+    height: 150px;
     
 }
 

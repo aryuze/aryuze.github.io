@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://aryuze.github.io/configuration/games/allstar3.json</loc>
+    
+    <lastmod>2023-09-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://aryuze.github.io/others/about.html</loc>
     
     <lastmod>2023-08-30</lastmod>
@@ -65,15 +74,6 @@
   </url>
   
   <url>
-    <loc>https://aryuze.github.io/configuration/games/allstargame.json</loc>
-    
-    <lastmod>2023-05-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://aryuze.github.io/lantern/SeasonalMarket.html</loc>
     
     <lastmod>2023-05-06</lastmod>
@@ -130,7 +130,7 @@
 
   <url>
     <loc>https://aryuze.github.io/</loc>
-    <lastmod>2023-09-20</lastmod>
+    <lastmod>2023-09-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://aryuze.github.io/configuration/games/allstar3.json</loc>
-    
-    <lastmod>2023-09-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://aryuze.github.io/others/about.html</loc>
     
     <lastmod>2023-08-30</lastmod>
@@ -83,15 +74,6 @@
   </url>
   
   <url>
-    <loc>https://aryuze.github.io/configuration/config_main.json</loc>
-    
-    <lastmod>2023-05-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://aryuze.github.io/others/cmd.html</loc>
     
     <lastmod>2023-04-30</lastmod>
@@ -130,7 +112,7 @@
 
   <url>
     <loc>https://aryuze.github.io/</loc>
-    <lastmod>2023-09-23</lastmod>
+    <lastmod>2023-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

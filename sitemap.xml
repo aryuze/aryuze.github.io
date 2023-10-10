@@ -2,18 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://aryuze.github.io/others/about.html</loc>
+    <loc>https://aryuze.github.io/2023/03/21/test1/</loc>
     
-    <lastmod>2023-08-30</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://aryuze.github.io/2023/03/21/test1/</loc>
+    <loc>https://aryuze.github.io/others/xiaoqiang/happybirthday.html</loc>
     
-    <lastmod>2023-08-29</lastmod>
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aryuze.github.io/others/about.html</loc>
+    
+    <lastmod>2023-08-30</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -112,7 +121,7 @@
 
   <url>
     <loc>https://aryuze.github.io/</loc>
-    <lastmod>2023-09-24</lastmod>
+    <lastmod>2023-10-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

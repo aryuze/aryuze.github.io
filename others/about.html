@@ -41,6 +41,7 @@
       </style>
     <link rel="alternate" href="/atom.xml" title="Aryuze's site" type="application/atom+xml">
 </head>
+    
   </html>
 </html>
 
@@ -76,6 +77,37 @@
 <script src="li-Email/js/APlayer.min.js"></script>
 <script src="li-Email/js/Meting.min.js"></script>
 
+<div class="pio-container left">
+    <div class="pio-action"></div>
+    <canvas id="pio" width="500" height="250"></canvas>
+</div>
+<link rel="stylesheet" href="banniang/css/pio.css">
+<script src="banniang/js/pio.js"></script>
+<script src="banniang/js/l2d.js"></script>
+<script>
+    var pio = new Paul_Pio({
+    "mode": "fixed",
+    "tips": true,
+    "hidden": true,
+    "content": {
+        "welcome": ["欢迎来到阿牛的网站！", "博主每天都有些折腾记录，欢迎前往他的小窝阅读~"],
+    },
+    "model": [
+    "banniang/live2d-widget-models/live2d-widget-model-miku/assets/miku.model.json", //初音
+    "banniang/live2d-widget-models/live2d-widget-model-shizuku/assets/shizuku.model.json",// 萌娘
+    "banniang/live2d-widget-models/live2d-widget-model-chitose/assets/chitose.model.json",
+    "banniang/live2d-widget-models/live2d-widget-model-koharu/assets/koharu.model.json",
+    "banniang/live2d-widget-models/live2d-widget-model-haru/01/assets/haru01.model.json",
+    "banniang/live2d-widget-models/live2d-widget-model-wanko/assets/wanko.model.json",
+    "banniang/live2d-widget-models/live2d-widget-model-vert/vert_classic/vert_classic.model.json",
+    "banniang/live2d-widget-models/live2d-widget-model-nepgear_extra/nepgear_extra/nepgear_extra.model.json",
+    "banniang/live2d-widget-models/live2d-widget-model-haruto/assets/haruto.model.json",
+    "banniang/live2d-widget-models/live2d-widget-model-haru/02/assets/haru02.model.json",
+    "banniang/live2d-widget-models/live2d-widget-model-histoire/histoire/histoire.model.json",
+    "banniang/live2d-widget-models/live2d-widget-model-blanc_normal/blanc_normal/blanc_normal.model.json",
+    ]
+});
+</script>
 
 
 <h2 id="有关于我的一些介绍"><a href="#有关于我的一些介绍" class="headerlink" title="有关于我的一些介绍:"></a>有关于我的一些介绍:</h2><p>本人为一名普通的初中牲,2019年开始接触编程.</p>
@@ -435,6 +467,6 @@
     
 
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>

@@ -67,6 +67,36 @@ var Paul_Pio = function (prop) {
         show: modules.create("div", {class: "pio-show"})
     };
 
+
+
+    /*/先定义一个新事件名称，如tap
+    var tap = new Event("tap",{
+        bubbles: true,
+    
+
+        //获取手指按下时的坐标
+        document.startPoint = {};
+        document.addEventListener("touchstart",function(e){
+            document.startPoint = {
+                x: e.changedTouches[0].pageX,
+                y: e.changedTouches[0].pageY
+            }
+        });
+        //获取手指抬起时的坐标
+        document.addEventListener("touchend",function(e){
+            var now = {
+                x: e.changedTouches[0].pageX,
+                y: e.changedTouches[0].pageY
+            };
+        //限定抬起的坐标与按下时不超过5px，如果满足条件则派发tap点击事件
+            if(Math.abs(now.x - document.startPoint.x)+Math.abs(now.y - document.startPoint.y) < 5){
+                // 派发事件
+                e.target.dispatchEvent(tap);
+            }
+        });
+
+});    
+*/
     var dialog = modules.create("div", {class: "pio-dialog"});
     current.body.appendChild(dialog);
     current.body.appendChild(elements.show);
@@ -119,6 +149,24 @@ var Paul_Pio = function (prop) {
         },
         // 触摸
         touch: function () {
+            current.canvas.addEventListener("touchstart",function(){
+                modules.render(["你这孩子就是欠抽了!","来把小桌板都立上!",'别跟我扯那些没有用的', '不学了放弃了中考不考了一百二十分不要了',
+                '不讲了我对你们够好了吧', '不管他', '从我开始讲育才报你们仨就在那笑也不知道是映射你们了还是你们从里头走出来的', 
+                '春雨惊春清谷天', '每次我看到抖音上的家长在灯红酒绿的宾馆里应酬我就感到心寒', '我从来不会把我姑娘一个人扔到家里不管', 
+                '第一位幸运儿', '就我们班内几个鬼', '就就就就就是有那个男的那个声', '咋地啊看人下菜碟啊', '不学英语了就学语文了', 
+                '大宝子二宝子回魂了', '庞希琳你个二傻子', '老师嗓子都哑了', '哪个老师能把嗓子讲哑的', '铃声就是命令啊', '六分', 
+                '能卫生吗', '你班这地得少少啊', '你们是臭傻子吗', '你们是不是贱脾子啊', '你们回家到底背不背政治啊', '你们就是欺负我',
+                 '你们倒是说话啊', '那全解能权威吗', '咱们这斥考试嗷没有山中考滴好', '来上课', '我的小琦琦啊', '都死去吧', '是谁让你在后面站着的',
+                  '桑沧海沧田', '太有用了', '这我上课都讲过', 
+               '我收拾你还能让你知道啊', '我是一个优柔寡断的人李家宝扣五分', '我还犯小错误了呗', '我给大家算笔帐', '我养一条狗三年', '这么讷那', '因因为啥啊',
+               '你班一片虚假繁荣', '别说漏了啊',
+               '我就是歧视你们', '有就画没有就写', '就你tm叫孙铭博啊', '认真的看认真的说别tm磕巴磕巴的一次性说完', 
+               '你瞅你那脑形就和别人不一样', '去去去给我滚后面去', '你那嘴巴子和皮燕子就是个连通器', '你班语文谁教的啊', 
+               '把你们那臭粪坑给我闭上', '睁开你们那两个黑洞看看', '有一个小叉叉叉叉叉', '有一个什么什么非常好的清朝花瓶', 
+               '作业拿出来没有的滚后面站着吧', '孙大宝', 
+              '王名浩', '李恩明', 'R鱼泽', '邓惠玉',
+               '李云轩', '胡说八道', '你以为你是江泽民你就是江泽民啊', '上帝的力量', '汉奸脑袋', '腌菜']);
+            })
             current.canvas.onclick = function () {
                 modules.render(prop.content.touch || ["你这孩子就是欠抽了!","来把小桌板都立上!",'别跟我扯那些没有用的', '不学了放弃了中考不考了一百二十分不要了',
                 '不讲了我对你们够好了吧', '不管他', '从我开始讲育才报你们仨就在那笑也不知道是映射你们了还是你们从里头走出来的', 

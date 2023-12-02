@@ -4,9 +4,31 @@
     <meta charset="utf-8">
     <title>Aryuze</title>
     <style>
+        @keyframes move{
+          from {color: rgb(0, 0, 0);margin-left: 6%;}
+          to {color: aliceblue;margin-left: 10%;}
+        }
+        @keyframes move_small{
+          from {color: rgb(0, 0, 0);margin-left: 6%;}
+          to {color: rgb(255, 255, 255);margin-left: 10%;}
+        }
+        body{
+          background-color: black;
+        }
+        .maintxt_cover{
+          position: absolute;
+          top: 20%;
+          margin-left: 20%;
+
+        }
+        .maintxt{
+            font-size: 1000%;
+            text-align: center center;
+            color: aliceblue;
+        }
         .video-container {
         position: relative;
-        width: 100%;
+        width: 100%;  
         height: 100vh;
         overflow: hidden;
         }
@@ -18,18 +40,111 @@
         height: 100%;
         object-fit: cover;
         }
+        .under{
+          position: relative;
+          width: 100%;
+          height: auto;
+          background-color: black;
+        }
+        .big_font{
+          position: relative;
+          font-size: 400%;
+          font-family: 'Verb';
+          color: rgb(0, 0, 0);
+          margin-left: 10%;
+          animation-name: none;
+          animation-duration: 2s;
+          animation-fill-mode: forwards;
+        }
+        .small_font{
+          position: relative;
+          font-size: 150%;
+          font-family: 'Verb';
+          color: rgb(0, 0, 0);
+          margin-left: 10%;
+          animation-name: none;
+          animation-duration: 2s;
+          animation-fill-mode: forwards;
+        }
     </style>
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Aryuze's site" type="application/atom+xml">
 </head>
 <body>
-  <div class="video-container">
-    <video id="video" loop="" muted="" autoplay=true poster="https://s1.aigei.com/src/img/jpg/29/293e01840fe54121b4c0f175c62d8508.jpg?imageMogr2/auto-orient/thumbnail/!580x435r/gravity/Center/crop/580x435/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:HP6U7oI0Dz8OuuN3tKNS5fOEhWU="
-    src="/video/try.mp4"></video>
+  
+  <div class="under">
+    <div class="video-container">
+        <video id="video" loop="" muted="" autoplay=true
+        src="https://vdn6.vzuu.com/HD/ff195658-9102-11ee-b258-a681a837b5d3-v8_f2_t1_PMF9Mn58.mp4?pkey=AAWmW8lUrw0Q1_4bxwvJmLTHG70_Jvkjnu6xrmA3PdotF0PswII7VQvED_1FLSrlaVvYT3qdSm_30I7nSY6ONhKb&bu=1513c7c2&c=avc.8.0&expiration=1701523276&f=mp4&pu=1513c7c2&v=ks6&pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&pf=Web&pt=zhihu"></video>
+    </div>
+    <div class="maintxt_cover">  
+        <h1 class="maintxt" style="font:'/fonts/Bukhari-Script.ttf'">Aryuze.</h1>
+    </div>
+    <h1 class="big_font" id="bigs1" style="margin-top: 2%;"><strong>About</strong></h1>
+    <h3 class="small_font" id="smalls1" style="margin-top: -4%;">Who I am?</h3>
+    
+    <h1 class="big_font" id="bigs2"><strong>Programs</strong></h1>
+    <h3 class="small_font" id="smalls2" style="margin-top: -4%;">My latest programs.</h3>
+    
+    <h1 class="big_font" id="bigs3"><strong>Future</strong></h1>
+    <h3 class="small_font" id="smalls3" style="margin-top: -4%;">What I shall do next.</h3>
+    <h1 style="margin-bottom: 4%;"><strong>   </strong></h1>
   </div>
-
 </body>
 </html>
+<script>
+function check_ttls(){
+  function abs(num){
+    if(num<0) return num+2*-num
+    else return num
+  }
+  var big1=document.getElementById("bigs1"),big2=document.getElementById("bigs2"),big3=document.getElementById("bigs3")
+  var small1=document.getElementById("smalls1"),small2=document.getElementById("smalls2"),small3=document.getElementById("smalls3")
+  var recttop =big1.getBoundingClientRect(),rectunder=big3.getBoundingClientRect();
+  var scr_height=screen.height;
+  //console.log(scr_height)
+  //console.log(abs(recttop.y-scr_height))
+  console.log(recttop.y)
+  //console.log(abs(scr_height-recttop.y))
+  //console.log(scr_height*0.1)
+  if(abs(scr_height-recttop.y)>scr_height*0.3){
+    big1.style['animation-name']='move';big2.style['animation-name']='move';big3.style['animation-name']='move';
+    small1.style['animation-name']='move';small2.style['animation-name']='move';small3.style['animation-name']='move';
+  }
+  mobile=false
+  if(window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) mobile=true
+  //后面完全失败
+  else{
+    if(mobile){
+      if (scr_height-recttop.y<=scr_height*0.3){
+        big1.style['animation-name']='none';big2.style['animation-name']='none';big3.style['animation-name']='none';
+        small1.style['animation-name']='none';small2.style['animation-name']='none';small3.style['animation-name']='none';
+      }
+    }
+    else{
+      if (abs(scr_height-recttop.y)<=scr_height*0.3){
+        big1.style['animation-name']='none';big2.style['animation-name']='none';big3.style['animation-name']='none';
+        small1.style['animation-name']='none';small2.style['animation-name']='none';small3.style['animation-name']='none';
+      }
+    }
+  }
+}
 
-
-
-
+function scrollHandle(){
+    var offset = document.getElementById("bigs1")
+    var width=offset.clientWidth;
+    //offset.
+    var height = offset.clientHeight;
+    var offsetBottom = offset.bottom;
+    var offsetHeight = offset.height;
+    // 进入可视区域
+    console.log(offsetTop,offsetBottom,offsetHeight);
+    if (offsetTop <= window.innerHeight && offsetBottom >= 0) {
+        console.log('进入可视区域');
+        // do something...
+    } else {
+        console.log('移出可视区域');
+        // do something...
+    }
+}
+window.addEventListener('scroll',check_ttls, true);
+</script>

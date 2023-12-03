@@ -100,10 +100,13 @@
 </body>
 
 <script>
-
+document.addEventListener('touchstart', function() {
+  document.getElementById('video').play()
+})
 function check_ttls(){
     var video = document.getElementById("video");
     video.play();
+
   function abs(num){
     if(num<0) return num+2*-num
     else return num

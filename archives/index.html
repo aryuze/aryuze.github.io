@@ -94,10 +94,13 @@
 </html>
 <script>
 function check_ttls(){
-  var video = document.getElementById("video");
-  if (video.paused) {
-    video.play();
+  window.onload=function(){
+    var video = document.getElementById("video");
+    if (video.paused) {
+      video.play();
+    }
   }
+  
 
   function abs(num){
     if(num<0) return num+2*-num

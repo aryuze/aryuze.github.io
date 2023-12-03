@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Aryuze&#39;s site</title>
+  
+  
+  <link href="https://aryuze.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://aryuze.github.io/"/>
+  <updated>2023-10-21T00:43:26.260Z</updated>
+  <id>https://aryuze.github.io/</id>
+  
+  <author>
+    <name>Ayz</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Welcome To My Website 🎈</title>
+    <link href="https://aryuze.github.io/2023/11/11/test1/"/>
+    <id>https://aryuze.github.io/2023/11/11/test1/</id>
+    <published>2023-11-11T09:14:09.688Z</published>
+    <updated>2023-10-21T00:43:26.260Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Quick-Access…"><a href="#Quick-Access…" class="headerlink" title="Quick Access…"></a>Quick Access…</h2><!--[李E-Mail](/others/li-Email/li-Email.html)--><p><a href="/others/xiaoqiang/happybirthday.html">小强的一个一个生日🎂</a></p><p><a href="/programs/allstar2">All-Star2-Standard</a></p><p><a href="/programs/index">程序(包括成型的，半成品和函数)</a></p><p><a href="/others/about">简介(建议阅读)📘</a></p><!--[代码池🎲](/others/cmd.html)--><p><a href="/others/install_app">学习编程以及运行我上传的程序所需软件🧑‍💻</a></p><p><a href="others/calculator.html">计算器(貌似啥都算不了)😅</a></p><p><a href="/others/about#donate">为我,网站或Lantern捐款或打赏</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

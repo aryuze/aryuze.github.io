@@ -41,6 +41,15 @@
         height: 100%;
         object-fit: cover;
         }
+        #videocover{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: 5;
+        }
         .under{
           position: relative;
           width: 100%;
@@ -80,9 +89,11 @@
 <body>
   
   <div class="under">
-    <div class="video-container">
+    <div class="video-container"><div id="videocover"></div>
         <video id="video" loop="loop" muted="muted" autoplay='autoplay'
-        src="https://vdn6.vzuu.com/HD/ff195658-9102-11ee-b258-a681a837b5d3-v8_f2_t1_PMF9Mn58.mp4?pkey=AAWzvs8RzkU3MWxy_4zY8Fecf-w20YV9d9iaszBEGZG_f9uX7_6FpbkE9FCP2oqR0U9HwuzlfGE4nZ-GshUlUhiM&bu=1513c7c2&c=avc.8.0&expiration=1702042520&f=mp4&pu=1513c7c2&v=ks6&pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&pf=Web&pt=zhihu"></video>
+        src="https://vdn6.vzuu.com/HD/ff195658-9102-11ee-b258-a681a837b5d3-v8_f2_t1_PMF9Mn58.mp4?pkey=AAWzvs8RzkU3MWxy_4zY8Fecf-w20YV9d9iaszBEGZG_f9uX7_6FpbkE9FCP2oqR0U9HwuzlfGE4nZ-GshUlUhiM&bu=1513c7c2&c=avc.8.0&expiration=1702042520&f=mp4&pu=1513c7c2&v=ks6&pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&pf=Web&pt=zhihu">
+        
+      </video>
     </div>
     <div class="maintxt_cover">  
         <h1 class="maintxt" id="toptxt" style="font:'/fonts/Bukhari-Script.ttf'">Aryuze.</h1>

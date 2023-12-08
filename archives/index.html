@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Aryuze</title>
+    <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
     <style>
         @keyframes move{
           from {color: rgb(0, 0, 0);margin-left: 6%;}
@@ -49,6 +50,10 @@
           height: 100%;
           object-fit: cover;
           z-index: 5;
+        }
+        video::--webkit-media-controls-play-button{
+          display: none !important;
+          -webkit-appearance: none !important;
         }
         .under{
           position: relative;
@@ -111,11 +116,13 @@
 </body>
 
 <script>
-document.addEventListener('touchstart', function() {
+$("video").load()
+$("video").play()
+/*document.addEventListener('touchstart', function() {
   document.getElementById('video').play()
 })
 var video = document.getElementById("video");
-video.play();
+video.play();*/
 function check_ttls(){
   
 

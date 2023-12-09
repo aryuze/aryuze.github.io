@@ -1,0 +1,43 @@
+@font-face{
+    font-family: "Bukhari-Script";
+    src: url('../fonts/Bukhari-Script.ttf');
+}
+
+video,img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-container,.img-container {
+    position: relative;
+    width: 100%;  
+    height: 100vh;
+    top: -60vh;
+    overflow: hidden;
+    transition:all ease-in-out 0.5s;
+}
+.img-container:hover{
+    transform:scale(1.1,1.1)
+}
+.toptxt{
+    text-align: center;
+    color: white;
+}
+.toptxt_cover{
+    font-family: "Bukhari-Script";
+    font-size: xx-large;
+    position: absolute;
+    top: 1%;
+    margin-left: 0%;
+    height: auto;
+    width: 100%;
+}
+.main-contents{
+    position: relative;
+    margin-top: 0vh;
+    height: auto;
+    width: 100%;
+}

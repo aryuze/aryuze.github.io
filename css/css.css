@@ -11,6 +11,7 @@ video,img {
     height: 100%;
     object-fit: cover;
 }
+
 .video-container,.img-container {
     position: relative;
     width: 100%;  
@@ -45,12 +46,12 @@ video,img {
     width: 100%;
 }
 #common-para{
-    font-family: "Microsoft YaHei";
+    font-family: "微软雅黑体";
     font-size: xx-large;
     display: block;
     margin-left: 5%;
     margin-right: 5%;
-    font-size: larger;
+    font-size:medium;
 }
 ttl{
     font-family: "Bukhari-Script";

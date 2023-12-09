@@ -94,10 +94,10 @@
   
   <div class="under">
     <div class="video-container"><div id="videocover"></div>
-        <img id="img" src="https://nl.static.pil0txia.com/gallery/tenki_no_ko/WEATHERING%20WITH%20YOU_003658.589.webp">
         <video id="video" loop="loop" muted="muted" autoplay='autoplay'
         src="https://vdn6.vzuu.com/HD/ff195658-9102-11ee-b258-a681a837b5d3-v8_f2_t1_PMF9Mn58.mp4?pkey=AAWzvs8RzkU3MWxy_4zY8Fecf-w20YV9d9iaszBEGZG_f9uX7_6FpbkE9FCP2oqR0U9HwuzlfGE4nZ-GshUlUhiM&bu=1513c7c2&c=avc.8.0&expiration=1702042520&f=mp4&pu=1513c7c2&v=ks6&pp=ChMxNDAxNjIzODY1NzM5NTc5MzkyGGMiC2ZlZWRfY2hvaWNlMhMxMzY5MDA1NjA4NTk5OTA0MjU3PXu830Q%3D&pf=Web&pt=zhihu">
         </video>
+        <img id="img" src="https://nl.static.pil0txia.com/gallery/tenki_no_ko/WEATHERING%20WITH%20YOU_003658.589.webp">
     </div>
     <div class="maintxt_cover">  
         <h1 class="maintxt" id="toptxt" style="font:'/fonts/Bukhari-Script.ttf'">Aryuze.</h1>
@@ -108,8 +108,8 @@
     <h1 class="big_font" id="bigs2"><strong>Programs</strong></h1>
     <h3 class="small_font" id="smalls2" style="margin-top: -4%;">My latest programs.</h3>
     
-    <h1 class="big_font" id="bigs3"><strong>Future</strong></h1>
-    <h3 class="small_font" id="smalls3" style="margin-top: -4%;">What I shall do next.</h3>
+    <h1 class="big_font" id="bigs3"><strong>Daily Life</strong></h1>
+    <h3 class="small_font" id="smalls3" style="margin-top: -4%;">Express The Life I Experienced.</h3>
     <h1 style="margin-bottom: 4%;"><strong>   </strong></h1>
   </div>
 </body>
@@ -120,17 +120,19 @@
 document.addEventListener('touchstart', function() {
   document.getElementById('video').play()
 })
-var a = navigator.userAgent;
-var isiOS = !!a.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+var u = navigator.userAgent;
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //iOS
 if(isiOS){
+  console.log('ios!!!')
   var video = document.getElementById("video");
+  video.pause();
   video.style['display']=''
 }
 else{
   var video = document.getElementById("video");
   video.play();
   var img = document.getElementById("img");
-  video.style['display']=''
+  img.remove();
 }
 function check_ttls(){
   function abs(num){

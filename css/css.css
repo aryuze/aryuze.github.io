@@ -22,6 +22,9 @@ video,img {
 .img-container:hover{
     transform:scale(1.1,1.1)
 }
+.toptxt_cover:hover{
+    transform:scale(1.1,1.1)
+}
 .toptxt{
     text-align: center;
     color: white;
@@ -34,10 +37,25 @@ video,img {
     margin-left: 0%;
     height: auto;
     width: 100%;
+    transition:all ease-in-out 0.5s;
 }
-.main-contents{
-    position: relative;
-    margin-top: 0vh;
-    height: auto;
+.main_content{
+    position: absolute;
+    top: 48vh;
     width: 100%;
+}
+#common-para{
+    font-family: "Microsoft YaHei";
+    font-size: xx-large;
+    display: block;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: larger;
+}
+ttl{
+    font-family: "Bukhari-Script";
+    font-size: xx-large;
+    position: relative;
+    left: 3%;
+    font-size: xx-large;
 }

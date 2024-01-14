@@ -14,15 +14,14 @@
         <h1 class="toptxt">About Me.</h1>
     </div>
     <div class="main_content">
-        
-        <ttl>About Myself 😊</ttl>
+        <div class="ttl">About Myself 😊</div>
         <p id="common-para">本人为一名普通的初中牲,2019年开始接触编程.</p>
         <p id="common-para">我比较擅长python,并且略微了解:<br>· html<br>· C++<br>· C#<br>· CSS<br>· JS<br>
             <i>*虽然如此,我在一些方面(高深莫测的方面)还仍有欠缺,如果你发现我的程序有误,恳请批评指正.</i>
         </p>
         <p id="common-para">除编程之外,我还喜欢小提琴,画画等(有时候也挺喜欢数学的)<br>当然也经常听听歌或者看看电影啥的.<br></p>
         
-        <ttl>Programming Road 💻</ttl>
+        <div class="ttl">Programming Road 💻</div>
         <p id="common-para">
             我在小学的时候曾经找过一些编程的课程,我记得很多学生都因为老师讲的快学不会所以不学了(当时学的都是基础的python)
             <br>但是我退出的主要原因是因为老师讲的太慢(无奈)
@@ -36,7 +35,7 @@
             <br>我会在接下来的几年里努力补上这个缺口。
         </p>
         
-        <ttl>Update 💡</ttl>
+        <div class="ttl">Update 💡</div>
         <p id="common-para">
             最近马上中考了,所以我可能不会怎么更新网站.
             <br>最近的大活也就是重新整整网站(之前用的是别人写好的内容,我想自力更生写一个自己的)
@@ -62,4 +61,28 @@
 </body>
 
 
-
+<script>
+    import { createRequire } from 'module';
+    const require = createRequire(import.meta.url);
+    var axios = require("axios")
+    var cheerio = require("cheerio")
+    axios.get("https://github.com/aryuze?tab=repositories").then(resp => {
+        var $ = cheerio.load(resp.data)
+        var lis = $("#user-repositories-list li")
+        var repos = []
+        for (var i = 0; i < lis.length; i++) {
+            var li = lis.eq(i)
+            var repo = {
+                repoName: li.find("h3").text().trim(),
+                repoUrl: li.find("h3 a").attr("href").trim(),
+                repoDesc: li.find("p").text().trim(),
+                language: li.find("[itemprop=programmingLanguage]").text().trim(),
+                star: li.find(".muted-link.mr-3").eq(0).text().trim(),
+                fork: li.find(".muted-link.mr-3").eq(1).text().trim(),
+                forkedFrom: li.find(".f6.text-gray.mb-1 a").text().trim()
+            }
+            repos.push(repo)
+        }
+        console.log(repos)
+    })
+</script>

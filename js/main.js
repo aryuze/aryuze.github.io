@@ -1,6 +1,10 @@
+import { get_picture } from './pictures.js'
 
 
-console.log(window.innerHeight);
+const img_tar = document.querySelector('.img');
+img_tar.src=get_picture();
+img_tar.setAttribute('style', 'transform:scale(1.1,1.1);')
+
 function check_ttls(){
     var winheight=window.innerHeight;
     const target = document.querySelectorAll('#common-para');

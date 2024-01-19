@@ -2,15 +2,11 @@
 
 console.log(window.innerHeight);
 function check_ttls(){
+    var winheight=window.innerHeight;
     const target = document.querySelectorAll('#common-para');
-    //console.log(target);
     for (var a=0;a<target.length;a++){
-        const clientRect = target[a].getBoundingClientRect()
-        var winheight=window.innerHeight;
-        //console.log(clientRect.y);
-        
+        var clientRect = target[a].getBoundingClientRect()
         if (0.2*winheight<=clientRect.y && clientRect.y+clientRect.height<=0.8*winheight){
-            
             target[a].setAttribute('style', 'color:black;')
             target[a].setAttribute('style', 'font-weight:bolder;')
         }
@@ -21,14 +17,9 @@ function check_ttls(){
     }
 
     const target_ttl = document.querySelectorAll('.ttl');
-    //console.log(target);
     for (var a=0;a<target_ttl.length;a++){
-        const clientRect = target_ttl[a].getBoundingClientRect()
-        var winheight=window.innerHeight;
-        //console.log(clientRect.y);
-        
+        var clientRect = target_ttl[a].getBoundingClientRect()
         if (0.2*winheight<=clientRect.y && clientRect.y+clientRect.height<=0.8*winheight){
-            
             target_ttl[a].setAttribute('style', 'color:black;')
             target_ttl[a].setAttribute('style', 'font-weight:bolder;')
         }
@@ -38,16 +29,19 @@ function check_ttls(){
         }
     }
 
-    const target_pic = document.querySelector('img-container');
-    if (0.2*winheight<=clientRect.y && clientRect.y+clientRect.height<=0.8*winheight){
-            
-        target_ttl[a].setAttribute('style', 'color:black;')
-        target_ttl[a].setAttribute('style', 'font-weight:bolder;')
+    const target_pic = document.querySelector('.img-container');
+    const target_word = document.querySelector('.toptxt_cover');
+    var clientRect = target_pic.getBoundingClientRect()
+    if (clientRect.y+clientRect.height>=0){
+        console.log(clientRect.y+clientRect.height);
+        target_pic.setAttribute('style', 'transform:scale(1.1,1.1);')
+        target_word.setAttribute('style', 'transform:scale(0.9,0.9);')
     }
     else{
-        target_ttl[a].setAttribute('style', 'font-weight:normal;')
-        target_ttl[a].setAttribute('style', 'color:#ccc;')
+        target_pic.setAttribute('style', 'transform:scale(1.0,1.0);')
+        target_word.setAttribute('style', 'transform:scale(1.1,1.1);')
     }
+    
 }
 
 window.addEventListener('scroll',check_ttls, true);

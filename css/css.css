@@ -10,9 +10,10 @@ body{
 video,img {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    margin-right: 5dvw;
+    width: 108%;
     height: 100%;
+    overflow: hidden;
     object-fit: cover;
 }
 
@@ -22,18 +23,19 @@ video,img {
     height: 100dvh;
     top: -60dvh;
     overflow: hidden;
-    
+    margin-right: 5dvw;
     transition:all ease-in-out 0.5s;
 }
-.img-container:hover{
+/*.img-container:hover{
     transform:scale(1.05,1.05)
 }
 .toptxt_cover:hover{
     transform:scale(0.9,0.9)
-}
+}*/
 .toptxt{
     text-align: center;
     color: white;
+    margin-right: 5dvw;
 }
 .toptxt_cover{
     font-family: "Bukhari-Script";
@@ -55,8 +57,9 @@ video,img {
     font-size: xx-large;
     display: block;
     margin-left: 5%;
-    margin-right: 5%;
+    margin-right: 5dvw;
     font-size:medium;
+    transition:all ease-in-out 0.5s;
 }
 
 div .ttl{
@@ -64,6 +67,7 @@ div .ttl{
     font-size: xx-large;
     position: relative;
     left: 4%;
+    margin-right: 5dvw;
     transition:all ease-in-out 0.5s;
 }
 

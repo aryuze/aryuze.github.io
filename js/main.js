@@ -1,10 +1,9 @@
 import { get_picture } from './pictures.js'
 
-
+window.scrollTo(0,0);
 const img_tar = document.querySelector('.img');
 img_tar.src=get_picture();
-img_tar.setAttribute('style', 'transform:scale(1.1,1.1);')
-
+//img_tar.setAttribute('style', 'transform:scale(1.5,1.5);')
 function check_ttls(){
     var winheight=window.innerHeight;
     const target = document.querySelectorAll('#common-para');
@@ -34,16 +33,21 @@ function check_ttls(){
     }
 
     const target_pic = document.querySelector('.img-container');
-    const target_word = document.querySelector('.toptxt_cover');
+    const target_word = document.querySelector('.main_content');
+    const target_mainttl = document.querySelector('.toptxt');
     var clientRect = target_pic.getBoundingClientRect()
-    if (clientRect.y+clientRect.height>=0){
-        console.log(clientRect.y+clientRect.height);
-        target_pic.setAttribute('style', 'transform:scale(1.1,1.1);')
-        target_word.setAttribute('style', 'transform:scale(0.9,0.9);')
+    //console.log(clientRect.y)
+    var t = document.documentElement.scrollTop||document.body.scrollTop;
+    //console.log(t/winheight)
+    if (t/winheight<0.4){
+        target_pic.setAttribute('style', 'top:0dvh;')
+        target_word.setAttribute('style', 'margin-top:20dvh;')
+        target_mainttl.setAttribute('style', 'transform:scale(1.5,1.5);')
     }
     else{
-        target_pic.setAttribute('style', 'transform:scale(1.0,1.0);')
-        target_word.setAttribute('style', 'transform:scale(1.1,1.1);')
+        target_pic.setAttribute('style', 'top:-40dvh;')  
+        target_word.setAttribute('style', 'margin-top:-20dvh;')
+        target_mainttl.setAttribute('style', 'transform:scale(1,1);')
     }
     
 }

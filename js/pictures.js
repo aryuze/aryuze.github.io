@@ -99,7 +99,9 @@ var item_sj7=[['https://pica.zhimg.com/80/c9a639c7983783e00fa88f0eabfcb085_1440w
 ,'《速度与激情 7》电影主题曲','Charile Puth']],['《速度与激情 7》(《Fast and Furious 7》)']]
 
 export function get_picture(){
-    var chosen_item,themes=['yyzt','ndmz','tqzz','ms','lyzl','ms','ndmz','tqzz'],item
+    var chosen_item,item
+    var themes=['yyzt','ndmz','tqzz','ms','lyzl','ms','ndmz','tqzz']
+    //var themes=['']
     function get_theme(){
         var choose_theme=themes[Math.floor(Math.random()*themes.length)]
         if(choose_theme=='yyzt') chosen_item=items_yyzt 

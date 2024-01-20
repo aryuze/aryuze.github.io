@@ -42,6 +42,13 @@ video,img {
     transition:all ease-in-out 1.2s;
     transform:scale(0.8,0.8);
 }
+.undertxt{
+    text-align: center;
+    color: white;
+    margin-right: 5dvw;
+    margin-bottom: 20dvh;
+    transform:scale(0.4,0.4);
+}
 .toptxt_cover{
     font-family: "Bukhari-Script";
     font-size: xx-large;

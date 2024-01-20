@@ -42,12 +42,12 @@ function check_ttls(){
     if (t/winheight<0.4){
         target_pic.setAttribute('style', 'top:0dvh;')
         target_word.setAttribute('style', 'margin-top:20dvh;')
-        target_mainttl.setAttribute('style', 'transform:scale(1.5,1.5);')
+        target_mainttl.setAttribute('style', 'transform:scale(1.2,1.2);')
     }
     else{
         target_pic.setAttribute('style', 'top:-40dvh;')  
         target_word.setAttribute('style', 'margin-top:-20dvh;')
-        target_mainttl.setAttribute('style', 'transform:scale(1,1);')
+        target_mainttl.setAttribute('style', 'transform:scale(0.8,0.8);')
     }
     
 }

@@ -40,7 +40,7 @@ video,img {
     margin-right: 5dvw;
     margin-top: 20dvh;
     transition:all ease-in-out 1.2s;
-    transform:scale(1.5,1.5);
+    transform:scale(0.8,0.8);
 }
 .toptxt_cover{
     font-family: "Bukhari-Script";

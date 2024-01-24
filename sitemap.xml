@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://aryuze.github.io/about%20-%20%E5%89%AF%E6%9C%AC.html</loc>
-    
-    <lastmod>2023-12-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://aryuze.github.io/2023/11/11/test1/</loc>
     
     <lastmod>2023-10-21</lastmod>
@@ -22,7 +13,7 @@
 
   <url>
     <loc>https://aryuze.github.io/</loc>
-    <lastmod>2024-01-20</lastmod>
+    <lastmod>2024-01-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>

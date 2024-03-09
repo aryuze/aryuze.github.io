@@ -124,10 +124,13 @@ p .program-word .program-word-more{
     transition:all ease-in-out 0.5s;
 }
 
-.program-word-exit{
+.program-button-word{
+    font-family: "Bukhari-Script";
     position: absolute;
-    width: 70dvw;
-    color:rgb(0, 208, 208);
+    left: 40%;
+    top: 60%;
+    font-size: xx-large;
+    color:rgb(255, 255, 255);
 }
 
 .modal{
@@ -142,9 +145,8 @@ p .program-word .program-word-more{
     margin: auto; 
 }
 .container{
-    position: relative;
     right: 10%;
-    height: 60%;
+    height: 40%;
     background-color: #fff;
     position: absolute;
     left: 10%;

@@ -1,9 +1,13 @@
 window.onload =
     function() {
-        const cover = document.querySelector('.program-word-more');
-        cover.onclick = click;
-        const exit = document.querySelector('.program-word-exit');
+        const target = document.querySelectorAll('.program-word-more');
+        for (var a=0;a<target.length;a++){
+            target[a].onclick=click(a);
+        }
+
+        const exit = document.querySelector('.program-button-word');
         exit.onclick = exitnow;
+        exitnow()
 }
 
 function lockScroll() {
@@ -27,11 +31,13 @@ function exitnow(){
     cover.setAttribute('style', 'display:none;')
     unlockScroll()
 }
-function click(){
+var all_text=['Aryuze Music Player是我最新制作的音乐播放软件,有时间我会传到网上.'
+            ,'Aryuze Translator是我之前写的一个翻译软件.']
+function click(textplace){
     const container = document.querySelector('.container');
     const cover = document.querySelector('.modal');
     container.setAttribute('style', 'display:block;')
     cover.setAttribute('style', 'display:block;')
     lockScroll()
-    container.innerHTML='Aryuze Music Player是我最新制作的音乐播放软件,有时间我会传到网上.'
+    container.innerHTML=all_text[textplace]
 }

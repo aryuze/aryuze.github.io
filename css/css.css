@@ -156,3 +156,30 @@ p .program-word .program-word-more{
     border-radius: 6px;
     padding: 1em;    
 }
+
+
+
+
+#gamebutton{
+    position: absolute;
+    background-color: cornflowerblue;
+    color:azure;
+    height: 6%;
+    left: 5%;
+    width: 30%;
+}
+#displayimg{
+    position: absolute;
+    width: 40%;
+    height: auto;
+}
+#toptxt_games{
+            font-family: "Bukhari-Script";
+            text-align: center;
+            color: rgb(91, 90, 90);
+            font-size: 20vh;
+            margin-right: 5dvw;
+            margin-top: 20dvh;
+            transition:all ease-in-out 1.2s;
+            transform:scale(0.8,0.8);
+}

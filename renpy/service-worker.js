@@ -1,4 +1,4 @@
-var cacheName = 'jiushichongti';
+var cacheName = '旧事重提';
 
 /* Start the service worker and cache all of the app's content or use the existing one */
 self.addEventListener('install', function (e) {

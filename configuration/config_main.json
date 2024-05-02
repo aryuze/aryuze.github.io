@@ -1,0 +1,9 @@
+{
+    "update":{
+        "1.0.0":{
+            "ver":"1.0.0",
+            "publisher":"Lantern Studio",
+            "alert":"欢迎访问Lantern Studio 1.0!"
+        }
+    }
+}

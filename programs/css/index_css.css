@@ -1,0 +1,47 @@
+.invisble{
+    display: block;
+    position: relative;
+    height: 250px;
+}
+.blocks{
+    display: inline-block; 
+    position: absolute;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    left:5%;
+    width: 90%;
+    outline: 2px solid;
+    top: 5%;
+    height: 90%;
+    max-width: 350px;
+}
+
+.image{
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 150px;
+    
+}
+
+.image_cover{
+    position: absolute;
+    width: 100%;
+    top: 2%;
+    height: 80%;
+}
+
+.main_txt{
+    position: absolute;
+    font-size: xx-large;
+    bottom: 15%;
+    text-decoration: none;
+    color: black;
+    left: 5%;
+}
+.under_txt{
+    position: absolute;
+    color:rgb(108, 96, 96);
+    bottom: 5%;
+    left: 5%;
+}

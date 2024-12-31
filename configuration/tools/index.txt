@@ -1,5 +1,5 @@
 [
-	["#DC143C",'main.gif']
+	["#DC143C",'main.gif'],
 	["test",'一个test',"download('test.txt')"],
 	["what?",'what the hell!?',"download('hell.txt')"]
 ]

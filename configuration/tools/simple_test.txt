@@ -3,11 +3,11 @@ if os.path.exists(LOCAL+'/asset/simple_test/favicon.png')==False:
 
 test_tk = Tk()
 
-image = PhotoImage(file=LOCAL+'/asset/simple_test/favicon.png')
+image_favicon = PhotoImage(file=LOCAL+'/asset/simple_test/favicon.png')
 
-label = Label(test_tk, image=image)
-
-label.pack()
+label_favicon = Label(test_tk)
+label_favicon.configure(image=image_favicon)
+label_favicon.pack()
 
 def close():
     test_tk.destroy()

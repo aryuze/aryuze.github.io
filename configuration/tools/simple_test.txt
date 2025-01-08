@@ -1,6 +1,7 @@
 if os.path.exists(LOCAL+'/asset/simple_test/favicon.png')==False:
     get_contents(['https://aryuze.github.io/configuration/tools/favicon.png'],'/asset/simple_test/favicon.png')
 
+global RUNNING
 test_tk = Tk()
 
 image_favicon = PhotoImage(file=LOCAL+'/asset/simple_test/favicon.png')
@@ -11,6 +12,7 @@ label_favicon.pack()
 
 def close():
     test_tk.destroy()
+    global RUNNING
     RUNNING=None
 
 test_tk.protocol("WM_DELETE_WINDOW", close)

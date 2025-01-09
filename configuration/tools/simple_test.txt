@@ -1,5 +1,8 @@
 if os.path.exists(LOCAL+'/asset/simple_test/favicon.png')==False:
-    get_contents(['https://aryuze.github.io/configuration/tools/favicon.png','https://aryuze.github.io/configuration/tools/favicon2.png'],'/asset/simple_test/favicon.png')
+    get_contents([
+        ['https://aryuze.github.io/configuration/tools/favicon.png','/asset/simple_test/favicon.png'],
+        ['https://aryuze.github.io/configuration/tools/favicon2.png','/asset/simple_test/favicon2.png']
+        ])
 
 global RUNNING
 test_tk = Toplevel()

@@ -2,7 +2,7 @@ if os.path.exists(LOCAL+'/asset/simple_test/favicon.png')==False:
     get_contents(['https://aryuze.github.io/configuration/tools/favicon.png'],'/asset/simple_test/favicon.png')
 
 global RUNNING
-test_tk = Tk()
+test_tk = Toplevel()
 
 image_favicon = PhotoImage(file=LOCAL+'/asset/simple_test/favicon.png')
 

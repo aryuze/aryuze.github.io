@@ -1,14 +1,19 @@
 if os.path.exists(LOCAL+'/asset/simple_test/favicon.png')==False:
-    get_contents(['https://aryuze.github.io/configuration/tools/favicon.png'],'/asset/simple_test/favicon.png')
+    get_contents(['https://aryuze.github.io/configuration/tools/favicon.png','https://aryuze.github.io/configuration/tools/favicon2.png'],'/asset/simple_test/favicon.png')
 
 global RUNNING
 test_tk = Toplevel()
 
 image_favicon = PhotoImage(file=LOCAL+'/asset/simple_test/favicon.png')
+image_favicon2 = PhotoImage(file=LOCAL+'/asset/simple_test/favicon2.png')
 
 label_favicon = Label(test_tk)
 label_favicon.configure(image=image_favicon)
 label_favicon.pack()
+
+label_favicon2 = Label(test_tk)
+label_favicon2.configure(image=image_favicon2)
+label_favicon2.pack()
 
 def close():
     global test_tk

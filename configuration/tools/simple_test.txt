@@ -11,6 +11,7 @@ label_favicon.configure(image=image_favicon)
 label_favicon.pack()
 
 def close():
+    global test_tk
     test_tk.destroy()
     global RUNNING
     RUNNING=None

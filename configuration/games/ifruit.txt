@@ -1,9 +1,5 @@
-The EYESFIND.COM:
-
-News:
-
-
-
-from lspd
-
-copyright Aryuze,2025
+[
+    ['The EYESFIND.COM:',80,'#000000'],
+    ['this is a 40 text',40,'#000000'],
+    ['this is a auto lines text:\n\nwhat???\n\nthis?',60,'#f00b0b'],
+]

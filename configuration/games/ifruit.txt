@@ -1,5 +1,5 @@
 [
-    ['The EYESFIND.COM:',80,'#000000'],
-    ['this is a 40 text',40,'#000000'],
-    ['this is a auto lines text:\n\nwhat???\n\nthis?',60,'#f00b0b'],
+    ['The EYESFIND.COM:',80,'#000000',450],
+    ['this is a 40 text',40,'#000000',550],
+    ['this is a auto lines text:\n\nwhat???\n\n\nthis?',60,'#f00b0b',850],
 ]

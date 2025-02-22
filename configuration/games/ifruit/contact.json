@@ -2,51 +2,51 @@
     {
         "title": "what",
         "description": "hello this is nothing",
-        "image": "https://aryuze.github.io/configuration/games/ifruit/what/what.png",
+        "image": ["https://aryuze.github.io/configuration/games/ifruit/what/what.png","what.png"],
         "audio": [
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl1.mp3",
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl2.mp3",
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl3.mp3"
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl1.mp3","zjl1.mp3"],
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl2.mp3","zjl2.mp3"],
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl3.mp3","zjl3.mp3"]
         ]
     },
     {
         "title": "what2",
         "description": "hello this is nothing2",
-        "image": "https://aryuze.github.io/configuration/games/ifruit/what/what.png",
+        "image": ["https://aryuze.github.io/configuration/games/ifruit/what/what.png","what.png"],
         "audio": [
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl1.mp3",
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl2.mp3",
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl3.mp3"
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl1.mp3","zjl1.mp3"],
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl2.mp3","zjl2.mp3"],
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl3.mp3","zjl3.mp3"]
         ]
     },
     {
         "title": "what3",
         "description": "hello this is nothing3",
-        "image": "https://aryuze.github.io/configuration/games/ifruit/what/what.png",
+        "image": ["https://aryuze.github.io/configuration/games/ifruit/what/what.png","what.png"],
         "audio": [
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl1.mp3",
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl2.mp3",
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl3.mp3"
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl1.mp3","zjl1.mp3"],
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl2.mp3","zjl2.mp3"],
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl3.mp3","zjl3.mp3"]
         ]
     },
     {
         "title": "what4",
         "description": "hello this is nothing4",
-        "image": "https://aryuze.github.io/configuration/games/ifruit/what/what.png",
+        "image": ["https://aryuze.github.io/configuration/games/ifruit/what/what.png","what.png"],
         "audio": [
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl1.mp3",
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl2.mp3",
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl3.mp3"
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl1.mp3","zjl1.mp3"],
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl2.mp3","zjl2.mp3"],
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl3.mp3","zjl3.mp3"]
         ]
     },
     {
         "title": "what5",
         "description": "hello this is nothing5",
-        "image": "https://aryuze.github.io/configuration/games/ifruit/what/what.png",
+        "image": ["https://aryuze.github.io/configuration/games/ifruit/what/what.png","what.png"],
         "audio": [
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl1.mp3",
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl2.mp3",
-            "https://aryuze.github.io/configuration/games/ifruit/what/zjl3.mp3"
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl1.mp3","zjl1.mp3"],
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl2.mp3","zjl2.mp3"],
+            ["https://aryuze.github.io/configuration/games/ifruit/what/zjl3.mp3","zjl3.mp3"]
         ]
     }
 ]

@@ -29,7 +29,7 @@
         }
         @font-face {
             font-family: 'main-2'; /* 定义字体名称 */
-            src: url('fonts/chinese.otf');
+            src: url('fonts/chinese.ttf');
         }
 
         /* 基础重置与变量定义 */
@@ -119,7 +119,7 @@
     <!-- 主内容区域 -->
     <div class="main-content">
         <h1 style="margin-bottom: 1rem; font-weight: 500;font-size:5rem; letter-spacing: 1px;max-width: 100%;font-family: 'main';">Aryuze</h1>
-        <p style="max-width: 100%; margin-bottom: 2rem; line-height: 1.6; color: inherit;font-family: 'main-2';font-size: xx-large;">千淘万漉虽辛苦 吹尽狂沙始到金</p>
+        <p style="max-width: 100%; margin-bottom: 2rem; line-height: 1.6; color: inherit;font-family: 'main-2';font-size: xx-large;">千淘万漉虽辛苦<br>吹尽狂沙始到金</p>
         <img src="">
         <div class="nav-buttons">
             <button class="nav-button" onclick="location.href='#'">About</button>
@@ -129,6 +129,7 @@
     </div>
 </body> 
 <script>
+        alert('网站正在维护中...现在还访问不了其他内容哈\n(得等我有时间才能更新)')
         document.addEventListener('DOMContentLoaded', function() {
             // 主题切换功能
             const themeToggle = document.querySelector('.theme-toggle');

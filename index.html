@@ -7,9 +7,6 @@
             Aryuze&#39;s site | 主页
         
     </title>
-    
-        <link rel="stylesheet" href="css/index.css">
-    
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Aryuze's site" type="application/atom+xml">
 </head>
 <body class="">
@@ -25,11 +22,11 @@
         /*字体*/
         @font-face {
             font-family: 'main'; /* 定义字体名称 */
-            src: url('fonts/main.ttf');
+            src: url('fonts/english.ttf');
         }
         @font-face {
             font-family: 'main-2'; /* 定义字体名称 */
-            src: url('fonts/chinese.ttf');
+            src: url('fonts/english2.ttf');
         }
 
         /* 基础重置与变量定义 */
@@ -112,24 +109,128 @@
             background: rgba(122, 122, 122, 0.2);
             transform: translateY(-3px);
         }
+
+
+        /* 弹窗基础样式 - 与你现有设计一致 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background-color: var(--bg-light);
+            margin: 5% auto;
+            padding: 1.5rem;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 700px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(93, 123, 166, 0.2);
+        }
+        
+        .close-btn {
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .close-btn:hover {
+            color: var(--accent);
+        }
+        
+        .article-item {
+            padding: 1rem;
+            margin-bottom: 0.8rem;
+            border-radius: 5px;
+            transition: var(--transition);
+            border-left: 3px solid var(--accent);
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .article-item:hover {
+            background-color: var(--accent-light);
+            transform: translateX(5px);
+        }
+        
+        .article-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: var(--accent);
+        }
+        
+        .article-date {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
     </style>
 </head>
 <body>
     
-    <!-- 主内容区域 -->
+    <!-- 主内容区域   千淘万漉虽辛苦<br>吹尽狂沙始到金 -->
     <div class="main-content">
         <h1 style="margin-bottom: 1rem; font-weight: 500;font-size:5rem; letter-spacing: 1px;max-width: 100%;font-family: 'main';">Aryuze</h1>
-        <p style="max-width: 100%; margin-bottom: 2rem; line-height: 1.6; color: inherit;font-family: 'main-2';font-size: xx-large;">千淘万漉虽辛苦<br>吹尽狂沙始到金</p>
+        <p style="max-width: 100%; margin-bottom: 2rem; line-height: 1.6; color: inherit;font-family: 'main-2';font-size: xx-large;">One with will walk longer.</p> 
         <img src="">
         <div class="nav-buttons">
-            <button class="nav-button" onclick="location.href='#'">About</button>
+            <button class="nav-button" onclick="location.href='/about/index'">About</button>
             <button class="nav-button" onclick="location.href='#'">Articles</button>
             <button class="nav-button" onclick="location.href='#'">My Life</button>
         </div>
+        <div id="articleModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h2 id="modalTitle">Articles</h2>
+                <span class="close-btn">&times;</span>
+                </div>
+                <div class="modal-body">
+                
+                
+                <!-- Articles内容 (默认隐藏) -->
+                <div id="articlesContent">
+                    
+                    <a href="/2025/06/27/abc/" class="article-item">
+                        <div class="article-title">Looooong Update</div>
+                        <div class="article-date">2025-06-27</div>
+                    </a>
+                    
+                </div>
+                
+                <!-- My Life内容 (默认隐藏) -->
+                <div id="lifeContent" style="display:none">
+                    
+                    <a href="/2025/06/27/english_article/" class="article-item">
+                        <div class="article-title">我之前出的英文题(原稿)</div>
+                        <div class="article-date">2025-06-27</div>
+                    </a>
+                    
+                </div>
+                </div>
+            </div>
+            </div>
     </div>
 </body> 
 <script>
-        alert('网站正在维护中...现在还访问不了其他内容哈\n(得等我有时间才能更新)')
+        //alert('网站正在维护中...现在还访问不了其他内容哈\n(得等我有时间才能更新)')
         document.addEventListener('DOMContentLoaded', function() {
             // 主题切换功能
             const themeToggle = document.querySelector('.theme-toggle');
@@ -190,7 +291,46 @@
             }
             
             window.addEventListener('resize', handleResize);
+
         });
+
+
+        // 仅需少量JavaScript控制显示/隐藏
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('articleModal');
+            const closeBtn = document.querySelector('.close-btn');
+            const articlesContent = document.getElementById('articlesContent');
+            const lifeContent = document.getElementById('lifeContent');
+        
+            // 修改现有按钮的点击事件
+        document.querySelector('.nav-button:nth-child(2)').onclick = function(e) {
+        e.preventDefault();
+        modal.style.display = 'block';
+        articlesContent.style.display = 'block';
+        lifeContent.style.display = 'none';
+        document.getElementById('modalTitle').textContent = 'Articles';
+        };
+        
+        document.querySelector('.nav-button:nth-child(3)').onclick = function(e) {
+        e.preventDefault();
+        modal.style.display = 'block';
+        articlesContent.style.display = 'none';
+        lifeContent.style.display = 'block';
+        document.getElementById('modalTitle').textContent = 'My Life';
+        };
+        
+        // 关闭弹窗
+        closeBtn.onclick = function() {
+        modal.style.display = 'none';
+        };
+        
+        // 点击外部关闭
+        window.onclick = function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+        };
+    });
     </script>
 
 </html>  <!-- 加载index.ejs内容 -->
@@ -203,7 +343,3 @@
 
 </body>
 </html>
-
-
-    <script src="js/index.js"></script>
-

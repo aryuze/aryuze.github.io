@@ -110,7 +110,6 @@
             transform: translateY(-3px);
         }
 
-
         /* 弹窗基础样式 - 与你现有设计一致 */
         .modal {
             display: none;
@@ -181,20 +180,27 @@
             font-size: 0.8rem;
             color: #888;
         }
+        .top-text{
+            max-width: 100%; 
+            margin-bottom: 2rem; 
+            line-height: 1.6; 
+            color: inherit;
+            font-family: 'main-2';
+            font-size: xx-large;
+        }
 
+        
     </style>
 </head>
 <body>
-    
-    <!-- 主内容区域   千淘万漉虽辛苦<br>吹尽狂沙始到金 -->
     <div class="main-content">
         <h1 style="margin-bottom: 1rem; font-weight: 500;font-size:5rem; letter-spacing: 1px;max-width: 100%;font-family: 'main';">Aryuze</h1>
-        <p style="max-width: 100%; margin-bottom: 2rem; line-height: 1.6; color: inherit;font-family: 'main-2';font-size: xx-large;">One with will walk longer.</p> 
+        <p class="top-text"></p> 
         <img src="">
         <div class="nav-buttons">
             <button class="nav-button" onclick="location.href='/about/index'">About</button>
             <button class="nav-button" onclick="location.href='#'">Articles</button>
-            <button class="nav-button" onclick="location.href='#'">My Life</button>
+            <button class="nav-button" onclick="location.href='#'">Daily</button>
         </div>
         <div id="articleModal" class="modal">
             <div class="modal-content">
@@ -203,7 +209,6 @@
                 <span class="close-btn">&times;</span>
                 </div>
                 <div class="modal-body">
-                
                 
                 <!-- Articles内容 (默认隐藏) -->
                 <div id="articlesContent">
@@ -230,107 +235,73 @@
     </div>
 </body> 
 <script>
-        //alert('网站正在维护中...现在还访问不了其他内容哈\n(得等我有时间才能更新)')
-        document.addEventListener('DOMContentLoaded', function() {
-            // 主题切换功能
-            const themeToggle = document.querySelector('.theme-toggle');
-            const body = document.body;
-            
-            // 检查本地存储或系统偏好
-            const savedTheme = localStorage.getItem('theme') || 
-                              (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-            
-            if (savedTheme === 'dark') {
-                body.classList.add('dark-mode');
-            }
-            
-            themeToggle.addEventListener('click', function() {
-                body.classList.toggle('dark-mode');
-                const theme = body.classList.contains('dark-mode') ? 'dark' : 'light';
-                localStorage.setItem('theme', theme);
-            });
-            
-            // 优雅菜单功能
-            const menuBtn = document.getElementById('menuBtn');
-            const dropdownMenu = document.getElementById('dropdownMenu');
-            
-            menuBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                menuBtn.classList.toggle('active');
-                dropdownMenu.classList.toggle('active');
-                
-                // 如果菜单正在关闭，延迟移除active类以实现平滑过渡
-                if (!dropdownMenu.classList.contains('active')) {
-                    setTimeout(() => {
-                        menuBtn.classList.remove('active');
-                    }, 400); // 与CSS过渡时间匹配
-                }
-            });
-            
-            // 点击其他地方关闭菜单
-            document.addEventListener('click', function() {
-                if (dropdownMenu.classList.contains('active')) {
-                    dropdownMenu.classList.remove('active');
-                    setTimeout(() => {
-                        menuBtn.classList.remove('active');
-                    }, 400);
-                }
-            });
-            
-            // 阻止菜单内部点击事件冒泡
-            //dropdownMenu.addEventListener('click', function(e) {
-            //    e.stopPropagation();
-            //});
-            
-            // 响应式调整
-            function handleResize() {
-                if (window.innerWidth > 768 && dropdownMenu.classList.contains('active')) {
-                    dropdownMenu.classList.remove('active');
-                    menuBtn.classList.remove('active');
-                }
-            }
-            
-            window.addEventListener('resize', handleResize);
 
-        });
-
-
-        // 仅需少量JavaScript控制显示/隐藏
+    // 仅需少量JavaScript控制显示/隐藏
         document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('articleModal');
             const closeBtn = document.querySelector('.close-btn');
             const articlesContent = document.getElementById('articlesContent');
             const lifeContent = document.getElementById('lifeContent');
-        
+            
             // 修改现有按钮的点击事件
-        document.querySelector('.nav-button:nth-child(2)').onclick = function(e) {
-        e.preventDefault();
-        modal.style.display = 'block';
-        articlesContent.style.display = 'block';
-        lifeContent.style.display = 'none';
-        document.getElementById('modalTitle').textContent = 'Articles';
+            document.querySelector('.nav-button:nth-child(2)').onclick = function(e) {
+                e.preventDefault();
+                modal.style.display = 'block';
+                articlesContent.style.display = 'block';
+                lifeContent.style.display = 'none';
+                document.getElementById('modalTitle').textContent = 'Articles';
+            };
+            
+            document.querySelector('.nav-button:nth-child(3)').onclick = function(e) {
+                e.preventDefault();
+                modal.style.display = 'block';
+                articlesContent.style.display = 'none';
+                lifeContent.style.display = 'block';
+                document.getElementById('modalTitle').textContent = 'My Life';
+            };
+            
+            // 关闭弹窗
+            closeBtn.onclick = function() {
+                modal.style.display = 'none';
+            };
+            
+            // 点击外部关闭
+            window.onclick = function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            };
+        });
+
+        const fadein = [
+            { opacity:"0" },
+            { opacity:"1" },
+        ];
+        const fadeout = [
+            { opacity:"1" },
+            { opacity:"0" },
+        ];
+        const Timing = {
+            duration: 1000,
         };
-        
-        document.querySelector('.nav-button:nth-child(3)').onclick = function(e) {
-        e.preventDefault();
-        modal.style.display = 'block';
-        articlesContent.style.display = 'none';
-        lifeContent.style.display = 'block';
-        document.getElementById('modalTitle').textContent = 'My Life';
-        };
-        
-        // 关闭弹窗
-        closeBtn.onclick = function() {
-        modal.style.display = 'none';
-        };
-        
-        // 点击外部关闭
-        window.onclick = function(e) {
-        if (e.target === modal) {
-            modal.style.display = 'none';
+
+        function change_text(){
+            const top_text = document.querySelector('.top-text');
+            top_text.animate(fadeout,Timing)
         }
-        };
-    });
+        function text_fadein(){
+            var alltext=['One with will walks longer.','Well begun,half done.','Every road leads to Rome.','Go everywhere you want.']
+            var num=Math.floor(Math.random()*(alltext.length))
+            const top_text = document.querySelector('.top-text');
+            top_text.innerText = alltext[num]
+            top_text.animate(fadein,Timing)
+        }
+        change_text()
+        setTimeout(text_fadein,1000)
+        setInterval(() => {
+            change_text()
+            setTimeout(text_fadein,1000)
+        }, 5000);
     </script>
 
 </html>  <!-- 加载index.ejs内容 -->

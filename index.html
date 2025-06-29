@@ -236,7 +236,7 @@
 </body> 
 <script>
 
-    // 仅需少量JavaScript控制显示/隐藏
+    // 控制小窗口显示/隐藏
         document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('articleModal');
             const closeBtn = document.querySelector('.close-btn');
@@ -249,7 +249,7 @@
                 modal.style.display = 'block';
                 articlesContent.style.display = 'block';
                 lifeContent.style.display = 'none';
-                document.getElementById('modalTitle').textContent = 'Articles';
+                document.getElementById('modalTitle').textContent = '文章 & 感悟';
             };
             
             document.querySelector('.nav-button:nth-child(3)').onclick = function(e) {
@@ -257,7 +257,7 @@
                 modal.style.display = 'block';
                 articlesContent.style.display = 'none';
                 lifeContent.style.display = 'block';
-                document.getElementById('modalTitle').textContent = 'My Life';
+                document.getElementById('modalTitle').textContent = '日常';
             };
             
             // 关闭弹窗
@@ -272,7 +272,8 @@
                 }
             };
         });
-
+        
+        //文字显示（淡入淡出）
         const fadein = [
             { opacity:"0" },
             { opacity:"1" },
@@ -289,13 +290,15 @@
             const top_text = document.querySelector('.top-text');
             top_text.animate(fadeout,Timing)
         }
+
         function text_fadein(){
-            var alltext=['One with will walks longer.','Well begun,half done.','Every road leads to Rome.','Go everywhere you want.']
+            var alltext=['One with will walks longer.','Well begun,half done.','Every road leads to Rome.','Nothing stops you unless you quit.']
             var num=Math.floor(Math.random()*(alltext.length))
             const top_text = document.querySelector('.top-text');
             top_text.innerText = alltext[num]
             top_text.animate(fadein,Timing)
         }
+
         change_text()
         setTimeout(text_fadein,1000)
         setInterval(() => {

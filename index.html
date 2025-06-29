@@ -188,15 +188,24 @@
             font-family: 'main-2';
             font-size: xx-large;
         }
-
+        .avatar-img{
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--accent);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
         
     </style>
 </head>
 <body>
     <div class="main-content">
+        <img class="avatar-img" src="main.jpg">
         <h1 style="margin-bottom: 1rem; font-weight: 500;font-size:5rem; letter-spacing: 1px;max-width: 100%;font-family: 'main';">Aryuze</h1>
         <p class="top-text"></p> 
-        <img src="">
         <div class="nav-buttons">
             <button class="nav-button" onclick="location.href='/about/index'">About</button>
             <button class="nav-button" onclick="location.href='#'">Articles</button>

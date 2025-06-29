@@ -6,7 +6,7 @@
   <link href="https://aryuze.github.io/atom.xml" rel="self"/>
   
   <link href="https://aryuze.github.io/"/>
-  <updated>2025-06-27T13:37:21.908Z</updated>
+  <updated>2025-06-27T13:34:01.905Z</updated>
   <id>https://aryuze.github.io/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Looooong Update</title>
-    <link href="https://aryuze.github.io/2025/06/27/abc/"/>
-    <id>https://aryuze.github.io/2025/06/27/abc/</id>
-    <published>2025-06-27T12:31:09.000Z</published>
-    <updated>2025-06-27T13:37:21.908Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>it’s been a super long time after the last update<br>because i was busy constructing the main part of my website<br>so i didn’t have any time to care about its content.</p><p>i will fill this website sooner or later.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
-      
-    
-    
-    
-    
-    <category term="article" scheme="https://aryuze.github.io/tags/article/"/>
-    
-  </entry>
   
   <entry>
     <title>我之前出的英文题(原稿)</title>
@@ -57,6 +35,28 @@
     
     
     <category term="daily" scheme="https://aryuze.github.io/tags/daily/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Looooong Update</title>
+    <link href="https://aryuze.github.io/2025/06/27/abc/"/>
+    <id>https://aryuze.github.io/2025/06/27/abc/</id>
+    <published>2025-06-27T12:31:09.000Z</published>
+    <updated>2025-06-29T09:53:27.392Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>it’s been a super long time after the last update<br>because i was busy constructing the main part of my website<br>so i didn’t have any time to care about its content.</p><p>i will fill this website sooner or later.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="article" scheme="https://aryuze.github.io/tags/article/"/>
     
   </entry>
   

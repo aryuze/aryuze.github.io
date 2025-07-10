@@ -318,13 +318,32 @@
         border: 1px solid #e2e8f0;
     }
 
+    /* 代码块容器 */
+    .article-content pre {
+        position: relative;
+        background: #f8fafc;
+        padding: 1rem;
+        overflow-x: auto;
+        font-size: 0.95rem;
+        font-family: 'Consolas', 'Courier New', monospace;
+        border-radius: 6px;
+        white-space: pre-wrap; /* 允许自动换行 */
+        word-wrap: break-word; /* 长单词换行 */
+        word-break: break-all; /* 更积极的断行策略 */
+    }
+
     /* 代码块内的代码 */
-    .article-content pre code {
+    .code {
         display: block;
         background: transparent;
         padding: 0;
         font-size: inherit;
         color: #334155;
+        white-space: pre-wrap; /* 继承容器的换行设置 */
+    }
+
+    .gutter pre{
+        display: none;
     }
 
     /* 代码块头部 */

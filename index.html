@@ -33,7 +33,7 @@
         :root {
             --bg-light: #FFFFFF;
             --bg-dark: #121212;
-            --text-light: #333333;
+            --text-light: #5680a6;
             --text-dark: #F5F5F5;
             --accent: #5D7BA6;
             --accent-light: rgba(93, 123, 166, 0.1);
@@ -83,13 +83,6 @@
             width: 100%; /* 页脚铺满屏幕 */
         }
         /* 导航按钮 */
-        .nav-buttons {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 50%;
-        }
 
         .nav-button {
             padding-top: 0.5rem;
@@ -180,14 +173,6 @@
             font-size: 0.8rem;
             color: #888;
         }
-        .top-text{
-            max-width: 100%; 
-            margin-bottom: 2rem; 
-            line-height: 1.6; 
-            color: inherit;
-            font-family: 'main-2';
-            font-size: xx-large;
-        }
         .avatar-img{
             width: 150px;
             height: 150px;
@@ -198,13 +183,90 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: var(--transition);
         }
-        
+        @media only screen and (max-width: 768px) { /*手机端*/
+            .main-txt{
+                position: absolute;
+                color: #000000;
+                margin-bottom: 1rem;
+                font-weight: 500;
+                font-size:5rem; 
+                letter-spacing: 1px;
+                max-width: 100%;
+                font-family: 'main'; 
+                border-width: 3rem;
+                top:53%;
+            }
+            .nav-buttons {
+                position: absolute;
+                display: flex;
+                gap: 1.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                max-width: 50%;
+                -webkit-text-fill-color: #5c5c5c;
+                top:70%;
+            }
+            .video-container {
+                position: fixed;
+                place-items: center;
+                left: calc(50% - (852px / 2));
+                width: 150%;
+                height: 50%;
+                overflow: hidden;
+                z-index: -1;
+            }
+            
+            .video-container video {
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+        }
+        @media (min-width: 769px){  /*电脑端*/
+            .main-txt{
+                color: #FFFFFF;
+                text-shadow: -1px -1px 0 #000,  1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+                margin-bottom: 1rem;
+                font-weight: 500;
+                font-size:5rem; 
+                letter-spacing: 1px;
+                max-width: 100%;
+                font-family: 'main'; 
+                border-width: 3rem;
+            }
+            .video-container {
+                position: absolute;
+                place-items: center;
+                top: 0;
+                left: 0;
+                justify-content: center; /* 水平居中 */
+                align-items: center;     /* 垂直居中 */
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                z-index: -1;
+            }
+            
+            .video-container video {
+                position: inherit;
+                justify-content: center,center; /* 水平居中 */
+                align-items: center,center;     /* 垂直居中 */
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="bg_movie.mp4" type="video/mp4">
+        </video>
+    </div>
     <div class="main-content">
         <img class="avatar-img" src="main.jpg">
-        <h1 style="margin-bottom: 1rem; font-weight: 500;font-size:5rem; letter-spacing: 1px;max-width: 100%;font-family: 'main';">Aryuze</h1>
+        <h1 class="main-txt">Aryuze</h1>
         <p class="top-text"></p> 
         <div class="nav-buttons">
             <button class="nav-button" onclick="location.href='/about/index'">About</button>
@@ -231,6 +293,11 @@
                 
                 <!-- My Life内容 (默认隐藏) -->
                 <div id="lifeContent" style="display:none">
+                    
+                    <a href="/2025/07/31/thinking-25-7-31/" class="article-item">
+                        <div class="article-title">对于应试教育的一些思考</div>
+                        <div class="article-date">2025-07-31</div>
+                    </a>
                     
                     <a href="/2025/06/27/english_article/" class="article-item">
                         <div class="article-title">我之前出的英文题(原稿)</div>
@@ -282,6 +349,7 @@
             };
         });
         
+        /*
         //文字显示（淡入淡出）
         const fadein = [
             { opacity:"0" },
@@ -313,7 +381,7 @@
         setInterval(() => {
             change_text()
             setTimeout(text_fadein,1000)
-        }, 5000);
+        }, 5000);*/
     </script>
 
 </html>  <!-- 加载index.ejs内容 -->

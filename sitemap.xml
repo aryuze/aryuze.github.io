@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://aryuze.github.io/2025/06/27/somecodes/</loc>
+    <loc>https://aryuze.github.io/2025/07/31/thinking-25-7-31/</loc>
     
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2025-08-03</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,16 @@
   <url>
     <loc>https://aryuze.github.io/about/index.html</loc>
     
-    <lastmod>2025-06-29</lastmod>
+    <lastmod>2025-07-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aryuze.github.io/2025/06/27/somecodes/</loc>
+    
+    <lastmod>2025-07-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +40,7 @@
 
   <url>
     <loc>https://aryuze.github.io/</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2025-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -39,14 +48,14 @@
   
   <url>
     <loc>https://aryuze.github.io/tags/article/</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2025-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aryuze.github.io/tags/daily/</loc>
-    <lastmod>2025-07-10</lastmod>
+    <lastmod>2025-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

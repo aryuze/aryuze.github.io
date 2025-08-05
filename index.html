@@ -39,70 +39,10 @@
             --accent-light: rgba(93, 123, 166, 0.1);
             --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
-        * {
+        .body{
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            width: 100%;
         }
-        html, body {
-            width: 100vw;
-            overflow: hidden; /* 隐藏水平滚动条 */
-        }
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-light);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            transition: var(--transition);
-        }
-
-        body.dark-mode {
-            background-color: var(--bg-dark);
-            color: var(--text-dark);
-        }
-
-        /* 主内容区域 */
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            width: 100%; /* 确保宽度不超过屏幕 */
-        }
-
-        /* 页脚 */
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            font-size: 0.9rem;
-            color: #888;
-            width: 100%; /* 页脚铺满屏幕 */
-        }
-        /* 导航按钮 */
-
-        .nav-button {
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-            font-size: 1.1rem;
-            border: 2px solid rgb(70, 70, 70);
-            color: rgb(0, 0, 0);
-            background: transparent;
-            border-radius: 50px;
-            transition: var(--transition);
-            width: 8rem;
-            backdrop-filter: blur(5px);
-            font-style: italic;
-        }
-
-        .nav-button:hover {
-            background: rgba(122, 122, 122, 0.2);
-            transform: translateY(-3px);
-        }
-
         /* 弹窗基础样式 - 与你现有设计一致 */
         .modal {
             display: none;
@@ -173,28 +113,40 @@
             font-size: 0.8rem;
             color: #888;
         }
-        .avatar-img{
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 2rem;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3px solid var(--accent);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: var(--transition);
+        .main-content{
+                position: absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                display: flex;
+                place-content: center;
         }
+
         @media only screen and (max-width: 768px) { /*手机端*/
+            
             .main-txt{
                 position: absolute;
+                display: flex;
+                place-content: center;
                 color: #000000;
-                margin-bottom: 1rem;
-                font-weight: 500;
-                font-size:4rem; 
-                letter-spacing: 1px;
-                max-width: 100%;
+                font-size:200%;
+                top:45%;
+                max-width: 150px;
                 font-family: 'main'; 
-                border-width: 3rem;
-                top:53%;
+            }
+            .avatar-img{
+                position: relative;
+                display: flex;
+                place-content: center;
+                top:30%;
+                width: 30dvw;
+                height: 30dvw;
+                max-width: 100px;
+                max-height: 100px;
+                border-radius: 50%;
+                overflow: hidden;
             }
             .nav-buttons {
                 position: absolute;
@@ -207,12 +159,27 @@
                 -webkit-text-fill-color: #5c5c5c;
                 top:70%;
             }
+            .nav-button {
+                padding-top: 2%;
+                padding-bottom: 2%;
+                font-size: 2%;
+                border: 2px solid rgb(70, 70, 70);
+                color: rgb(0, 0, 0);
+                background: transparent;
+                border-radius: 50px;
+                transition: var(--transition);
+                width: 70%;
+                backdrop-filter: blur(5px);
+                font-style: italic;
+            }
             .video-container {
-                position: fixed;
+                position: absolute;
+                display: flex;
                 place-items: center;
-                left: calc(50% - (852px / 2));
-                
+                max-width: 100%;
                 height: 50%;
+                top: 0%;
+                left: 0%;
                 overflow: hidden;
                 z-index: -1;
             }
@@ -225,6 +192,8 @@
         }
         @media (min-width: 769px){  /*电脑端*/
             .main-txt{
+                position: absolute;
+                top:35% ;
                 color: #FFFFFF;
                 text-shadow: -1px -1px 0 #000,  1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
                 margin-bottom: 1rem;
@@ -234,6 +203,47 @@
                 max-width: 100%;
                 font-family: 'main'; 
                 border-width: 3rem;
+            }
+            .avatar-img{
+                position: absolute;
+                display: flex;
+                place-content: center;
+                top:15%;
+                border-radius: 50%;
+
+                width: 150px;
+                height: 150px;
+                margin: 0 auto 2rem;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 3px solid var(--accent);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                transition: var(--transition);
+            }
+            .nav-buttons {
+                position: absolute;
+                top:75% ;
+                gap: 1.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                max-width: 50%;
+            }
+            .nav-button {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                font-size: 1.1rem;
+                border: 2px solid rgb(70, 70, 70);
+                color: rgb(0, 0, 0);
+                background: transparent;
+                border-radius: 50px;
+                transition: var(--transition);
+                width: 8rem;
+                backdrop-filter: blur(5px);
+                font-style: italic;
+            }
+            .nav-button:hover {
+                background: rgba(122, 122, 122, 0.2);
+                transform: translateY(-3px);
             }
             .video-container {
                 position: absolute;
@@ -261,10 +271,11 @@
 </head>
 <body>
     <div class="video-container">
-        <video autoplay muted loop>
-            <source src="https://cdn.jsdelivr.net/gh/aryuze/aryuze.github.io@master/bg_movie.mp4" type="video/mp4">
-        </video>
+            <video autoplay muted loop>
+                <source src="https://cdn.jsdelivr.net/gh/aryuze/aryuze.github.io@master/bg_movie.mp4" type="video/mp4"> <!--https://cdn.jsdelivr.net/gh/aryuze/aryuze.github.io@master/bg_movie.mp4-->
+            </video>
     </div>
+    
     <div class="main-content">
         <img class="avatar-img" src="https://cdn.jsdelivr.net/gh/aryuze/aryuze.github.io@master/main.jpg">
         <h1 class="main-txt">Aryuze</h1>
@@ -282,32 +293,31 @@
                 </div>
                 <div class="modal-body">
                 
-                <!-- Articles内容 (默认隐藏) -->
+                    <!-- Articles内容 (默认隐藏) -->
                 <div id="articlesContent">
-                    
-                    <a href="/2025/06/27/somecodes/" class="article-item">
-                        <div class="article-title">关于个人主题的编写经验</div>
-                        <div class="article-date">2025-06-27</div>
-                    </a>
-                    
+                        
+                        <a href="/2025/06/27/somecodes/" class="article-item">
+                            <div class="article-title">关于个人主题的编写经验</div>
+                            <div class="article-date">2025-06-27</div>
+                        </a>
+                        
                 </div>
-                
-                <!-- My Life内容 (默认隐藏) -->
+                    
+                    <!-- My Life内容 (默认隐藏) -->
                 <div id="lifeContent" style="display:none">
-                    
-                    <a href="/2025/07/31/thinking-25-7-31/" class="article-item">
-                        <div class="article-title">对于应试教育的一些思考</div>
-                        <div class="article-date">2025-07-31</div>
-                    </a>
-                    
-                    <a href="/2025/06/27/english_article/" class="article-item">
-                        <div class="article-title">我之前出的英文题(原稿)</div>
-                        <div class="article-date">2025-06-27</div>
-                    </a>
-                    
+                        
+                        <a href="/2025/07/31/thinking-25-7-31/" class="article-item">
+                            <div class="article-title">对于应试教育的一些思考</div>
+                            <div class="article-date">2025-07-31</div>
+                        </a>
+                        
+                        <a href="/2025/06/27/english_article/" class="article-item">
+                            <div class="article-title">我之前出的英文题(原稿)</div>
+                            <div class="article-date">2025-06-27</div>
+                        </a>
+                        
                 </div>
                 </div>
-            </div>
             </div>
     </div>
 </body> 
@@ -389,9 +399,7 @@
     
 
     <!-- 共用页脚 -->
-    <footer>
-        © 2025 Aryuze&#39;s site
-    </footer>
+    
 
 </body>
 </html>

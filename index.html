@@ -317,42 +317,7 @@
     </div>
 </body> 
 <script>
-    //视频播放问题:
-    const video = document.getElementById('video');
-    const VIDEO_URL = 'https://cdn.jsdelivr.net/gh/aryuze/aryuze.github.io@master/bg_movie.mp4';
-    const CHECK_INTERVAL = 2000; // 每5秒检查一次
-    let isPlaying = false;
-    let checkTimer = null;
-
-    // 初始化视频
-    function initVideo() {
-        video.src = VIDEO_URL;
-        video.load(); // 强制重新加载
-        video.addEventListener('playing', () => {
-            isPlaying = true;
-            clearInterval(checkTimer); // 播放成功后停止检查
-        });
-    }
-
-    // 检查视频状态
-    function checkVideoStatus() {
-        console.log(isPlaying)
-        if (!isPlaying) {
-            initVideo();
-            video.play().catch(e => console.warn('自动播放被阻止:', e));
-        }
-    }
-
-    // 启动定时检查
-    function startVideoMonitor() {
-        initVideo(); // 首次加载
-        checkTimer = setInterval(checkVideoStatus, CHECK_INTERVAL);
-    }
-
-    // 开始监控
-    startVideoMonitor();
-
-
+    
     // 控制小窗口显示/隐藏
     document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('articleModal');

@@ -328,7 +328,6 @@
     function initVideo() {
         video.src = VIDEO_URL;
         video.load(); // 强制重新加载
-        video.play()
         video.addEventListener('playing', () => {
             isPlaying = true;
             clearInterval(checkTimer); // 播放成功后停止检查

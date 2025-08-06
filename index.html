@@ -328,6 +328,7 @@
     function initVideo() {
         video.src = VIDEO_URL;
         video.load(); // 强制重新加载
+        video.play()
         video.addEventListener('playing', () => {
             isPlaying = true;
             clearInterval(checkTimer); // 播放成功后停止检查
@@ -336,6 +337,7 @@
 
     // 检查视频状态
     function checkVideoStatus() {
+        console.log(isPlaying)
         if (!isPlaying) {
             initVideo();
             video.play().catch(e => console.warn('自动播放被阻止:', e));

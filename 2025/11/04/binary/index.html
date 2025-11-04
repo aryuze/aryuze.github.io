@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>
         
-             | Aryuze&#39;s site
+            转二进制的python代码样例 | Aryuze&#39;s site
         
     </title>
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Aryuze's site" type="application/atom+xml">
 </head>
-<body class="">
+<body class="post-page">
 
     <!-- 动态内容切换区 -->
     
@@ -96,7 +96,7 @@
         }
     </style>
 </head>
-<body class="1"> <!---->
+<body class="1"> <!--post-page-->
     
     <!-- 导航栏 -->
     <nav class="navbar">
@@ -113,14 +113,20 @@
     <div class="article-container">
         <!-- 文章头部 -->
 <header class="article-header">
-    <h1 class="article-title"></h1>
+    <h1 class="article-title">转二进制的python代码样例</h1>
     <div class="article-meta">
         <span>发布时间: 2025年11月04日</span>
 </header>
 
 <!-- 文章正文 -->
 <article class="article-content">
-    
+    <p>下面是信息考试想用python交作业的同学可以用的参考代码:(开源，自由转发)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">num=int(input())</span><br><span class="line">def calc(n):</span><br><span class="line">    if n == 0: return &quot;&quot;</span><br><span class="line">    return calc(n // 2) + str(n % 2)</span><br><span class="line">binary_str = calc(abs(num)) if abs(num) &gt; 0 else &quot;0&quot;</span><br><span class="line">print(binary_str if num &gt;= 0 else &#x27;-&#x27; + binary_str)</span><br></pre></td></tr></table></figure>
+<p>(这个是精简版，里面用到了递归)<br>如果这个对你来说有些难以理解，还有一个稍微麻烦一点的(递归肯定跑不了了肯定得用):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">a=int(input())</span><br><span class="line">out=&#x27;&#x27;</span><br><span class="line">def calc(num):</span><br><span class="line">    global out</span><br><span class="line">    if num==1:return 1</span><br><span class="line">    res=str(calc(num//2))</span><br><span class="line">    out=out+res</span><br><span class="line">    return num%2</span><br><span class="line">if a!=0:</span><br><span class="line">    res=str(calc(abs(a)))</span><br><span class="line">    out=out+res</span><br><span class="line">    if a&lt;0: out=&#x27;-&#x27;+out</span><br><span class="line">else: out=0</span><br><span class="line">print(out)</span><br></pre></td></tr></table></figure>
+<p>我个人觉得最好还是越精简越好(有强迫症没办法)</p>
+<p>P.S. 这个题目其实有对应的python内置函数可以一步解决:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(format(int(input()),&#x27;b&#x27;))</span><br></pre></td></tr></table></figure>
 </article>
 
 <!-- 评论系统 -->

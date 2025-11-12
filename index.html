@@ -130,7 +130,7 @@
                 position: absolute;
                 display: flex;
                 place-content: center;
-                color: #000000;
+                color: #ffffff;
                 font-size:400%;
                 top:50%;
                 max-width: 150px;
@@ -267,17 +267,46 @@
                 object-fit: cover;
             }
         }
+
+        .text-effect {
+                font-size: 3rem;
+                font-weight: bold;
+                font-family: 'main'; 
+                color: rgb(255, 255, 255);
+                text-align: center;
+                margin-left: 10%;
+                margin-right: 10%;
+                filter: blur(15px);
+                opacity: 0;
+                transition: filter 2s ease, opacity 2s ease;
+            }
+            .start-cover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgb(0, 0, 0);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+            }
     </style>
 </head>
-<body>
+<body style="background-color: black;">
     <div class="video-container">
-            <video autoplay muted loop preload="metadata" id="video">
+            <video muted loop preload="metadata" id="video">
                 <source src="https://cdn.jsdelivr.net/gh/aryuze/aryuze.github.io@master/bg_movie.mp4" type="video/mp4">
             </video>
     </div>
-    
+
+    <div class="start-cover">
+        <div class="text-effect" id="animatedText"></div>
+    </div>
+
     <div class="main-content">
-        <img class="avatar-img" src="https://cdn.jsdelivr.net/gh/aryuze/aryuze.github.io@master/main.jpg">
+        <!--img class="avatar-img" src="https://cdn.jsdelivr.net/gh/aryuze/aryuze.github.io@master/main.jpg"-->
         <h1 class="main-txt">Aryuze</h1>
         <p class="top-text"></p> 
         <div class="nav-buttons">
@@ -322,7 +351,54 @@
     </div>
 </body> 
 <script>
-    
+    function fadeOut(element, duration) {
+        let opacity = 1;
+        const interval = 50;
+        const step = interval / duration;
+        const timer = setInterval(() => {
+            opacity -= step;
+            if (opacity <= 0) {
+                opacity = 0;
+                const video=document.getElementById("video");
+                video.play();
+                element.remove()
+                clearInterval(timer);
+            }
+            element.style.opacity = opacity;
+        }, interval);
+    }
+
+    function change_blur_text(texts) {
+        const textElement = document.getElementById('animatedText');
+        let currentIndex = 0;
+        function showNextText() {
+            if (currentIndex >= texts.length) {
+                // 所有文字显示完成后开始淡出
+                const start_cover = document.getElementsByClassName("start-cover");
+                if (start_cover.length > 0) {
+                    fadeOut(start_cover[0], 1500);
+                }
+                return;
+            }
+            textElement.textContent = texts[currentIndex];
+            textElement.style.filter = "blur(0)";
+            textElement.style.opacity = "1";
+            setTimeout(() => {
+                textElement.style.filter = "blur(15px)";
+                textElement.style.opacity = "0";
+                
+                currentIndex++;
+                
+                // 短暂延迟后显示下一个文字
+                setTimeout(showNextText, 1000);
+            }, 2000);
+        }
+        textElement.style.filter = "blur(15px)";
+        textElement.style.opacity = "0";
+        showNextText();
+    }
+    change_blur_text(["You'll get","What you fucking deserve."]);
+
     // 控制小窗口显示/隐藏
     document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('articleModal');
@@ -359,40 +435,6 @@
             }
         };
     });
-        
-    /*
-        //文字显示（淡入淡出）
-        const fadein = [
-            { opacity:"0" },
-            { opacity:"1" },
-        ];
-        const fadeout = [
-            { opacity:"1" },
-            { opacity:"0" },
-        ];
-        const Timing = {
-            duration: 1000,
-        };
-
-        function change_text(){
-            const top_text = document.querySelector('.top-text');
-            top_text.animate(fadeout,Timing)
-        }
-
-        function text_fadein(){
-            var alltext=['One with will walks longer.','Well begun,half done.','Every road leads to Rome.','Nothing stops you unless you quit.']
-            var num=Math.floor(Math.random()*(alltext.length))
-            const top_text = document.querySelector('.top-text');
-            top_text.innerText = alltext[num]
-            top_text.animate(fadein,Timing)
-        }
-
-        change_text()
-        setTimeout(text_fadein,1000)
-        setInterval(() => {
-            change_text()
-            setTimeout(text_fadein,1000)
-        }, 5000);*/
     </script>
 
 </html>  <!-- 加载index.ejs内容 -->

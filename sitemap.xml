@@ -40,22 +40,22 @@
 
   <url>
     <loc>https://aryuze.github.io/</loc>
-    <lastmod>2025-11-12</lastmod>
+    <lastmod>2025-11-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://aryuze.github.io/tags/article/</loc>
-    <lastmod>2025-11-12</lastmod>
+    <loc>https://aryuze.github.io/tags/daily/</loc>
+    <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://aryuze.github.io/tags/daily/</loc>
-    <lastmod>2025-11-12</lastmod>
+    <loc>https://aryuze.github.io/tags/article/</loc>
+    <lastmod>2025-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

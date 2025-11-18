@@ -3,11 +3,11 @@
   <title>Aryuze&#39;s site</title>
   
   
-  <link href="https://aryuze.github.io/atom.xml" rel="self"/>
+  <link href="https://aritz-real.github.io/atom.xml" rel="self"/>
   
-  <link href="https://aryuze.github.io/"/>
+  <link href="https://aritz-real.github.io/"/>
   <updated>2025-11-04T15:18:07.345Z</updated>
-  <id>https://aryuze.github.io/</id>
+  <id>https://aritz-real.github.io/</id>
   
   <author>
     <name>Ayz</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>转二进制的python代码样例</title>
-    <link href="https://aryuze.github.io/2025/11/04/binary/"/>
-    <id>https://aryuze.github.io/2025/11/04/binary/</id>
+    <link href="https://aritz-real.github.io/2025/11/04/binary/"/>
+    <id>https://aritz-real.github.io/2025/11/04/binary/</id>
     <published>2025-11-04T15:59:59.000Z</published>
     <updated>2025-11-04T15:18:07.345Z</updated>
     
@@ -34,14 +34,14 @@
     
     
     
-    <category term="article" scheme="https://aryuze.github.io/tags/article/"/>
+    <category term="article" scheme="https://aritz-real.github.io/tags/article/"/>
     
   </entry>
   
   <entry>
     <title>我之前出的英文题(原稿)</title>
-    <link href="https://aryuze.github.io/2025/06/27/english_article/"/>
-    <id>https://aryuze.github.io/2025/06/27/english_article/</id>
+    <link href="https://aritz-real.github.io/2025/06/27/english_article/"/>
+    <id>https://aritz-real.github.io/2025/06/27/english_article/</id>
     <published>2025-06-27T12:31:09.000Z</published>
     <updated>2025-06-27T13:34:01.905Z</updated>
     
@@ -56,14 +56,14 @@
     
     
     
-    <category term="daily" scheme="https://aryuze.github.io/tags/daily/"/>
+    <category term="daily" scheme="https://aritz-real.github.io/tags/daily/"/>
     
   </entry>
   
   <entry>
     <title>关于个人主题的编写经验</title>
-    <link href="https://aryuze.github.io/2025/06/27/somecodes/"/>
-    <id>https://aryuze.github.io/2025/06/27/somecodes/</id>
+    <link href="https://aritz-real.github.io/2025/06/27/somecodes/"/>
+    <id>https://aritz-real.github.io/2025/06/27/somecodes/</id>
     <published>2025-06-27T12:31:09.000Z</published>
     <updated>2025-07-10T14:40:26.338Z</updated>
     
@@ -78,7 +78,7 @@
     
     
     
-    <category term="article" scheme="https://aryuze.github.io/tags/article/"/>
+    <category term="article" scheme="https://aritz-real.github.io/tags/article/"/>
     
   </entry>
   

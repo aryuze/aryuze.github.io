@@ -124,6 +124,14 @@
                 place-content: center;
         }
 
+        .content-upper{
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
         @media only screen and (max-width: 768px) { /*手机端*/
             
             .main-txt{
@@ -132,7 +140,8 @@
                 place-content: center;
                 color: #ffffff;
                 font-size:400%;
-                top:50%;
+                top:25% ;
+                left: 30%;
                 max-width: 150px;
                 font-family: 'main'; 
             }
@@ -192,11 +201,11 @@
         }
         @media (min-width: 769px){  /*电脑端*/
             .main-txt{
-                position: absolute;
-                top:35% ;
-                color: #FFFFFF;
+                display: flex;
+                top: 50%;
+                justify-content: center;
+                color: #ffffff;
                 text-shadow: -1px -1px 0 #000,  1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
-                margin-bottom: 1rem;
                 font-weight: 500;
                 font-size:5rem; 
                 letter-spacing: 1px;
@@ -294,25 +303,27 @@
             }
     </style>
 </head>
-<body style="background-color: black;">
-    <div class="video-container">
+<body style="background-color: rgb(255, 255, 255);">
+    <!--div class="video-container">
             <video muted loop preload="metadata" id="video">
                 <source src="https://cdn.jsdelivr.net/gh/aritz-real/aritz-real.github.io@master/bg_movie.mp4" type="video/mp4">
             </video>
-    </div>
+    </div-->
 
-    <div class="start-cover">
+    <div class="start-cover" style="z-index: -1; background-color: #ffffff;">
         <div class="text-effect" id="animatedText"></div>
     </div>
 
     <div class="main-content">
         <!--img class="avatar-img" src="https://cdn.jsdelivr.net/gh/aryuze/aryuze.github.io@master/main.jpg"-->
-        <h1 class="main-txt">Aritz</h1>
-        <p class="top-text"></p> 
+        
         <div class="nav-buttons">
             <button class="nav-button" onclick="location.href='/about/index'">About</button>
             <button class="nav-button" onclick="location.href='#'">Articles</button>
             <button class="nav-button" onclick="location.href='#'">Daily</button>
+        </div>
+        <div class="content-upper" style="background-color: #000000;z-index: -1;width: 100%;height: 50%;">
+            <h1 class="main-txt">Aritz</h1>
         </div>
         <div id="articleModal" class="modal">
             <div class="modal-content">
@@ -351,7 +362,7 @@
     </div>
 </body> 
 <script>
-    function fadeOut(element, duration) {
+    /*function fadeOut(element, duration) {
         let opacity = 1;
         const interval = 50;
         const step = interval / duration;
@@ -397,8 +408,8 @@
         textElement.style.opacity = "0";
         showNextText();
     }
-    change_blur_text(["You'll get","What you fucking deserve."]);
-
+    change_blur_text([])//'"How much you think you weighs"','"Fuck you"']);
+    */
     // 控制小窗口显示/隐藏
     document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('articleModal');

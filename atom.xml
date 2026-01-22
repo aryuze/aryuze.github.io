@@ -6,7 +6,7 @@
   <link href="https://aritz-real.github.io/atom.xml" rel="self"/>
   
   <link href="https://aritz-real.github.io/"/>
-  <updated>2025-11-04T15:18:07.345Z</updated>
+  <updated>2026-01-20T07:16:33.055Z</updated>
   <id>https://aritz-real.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最近的一些思考</title>
+    <link href="https://aritz-real.github.io/2026/01/17/2026Jan17_thinking/"/>
+    <id>https://aritz-real.github.io/2026/01/17/2026Jan17_thinking/</id>
+    <published>2026-01-16T16:00:00.000Z</published>
+    <updated>2026-01-20T07:16:33.055Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最近真的很忙很忙，也从来没想到自己还有个网站可以写东西。<br>我会不定期在这里写下自己的一些思考，也算是对自己的成长做个见证吧。</p><h1 id="我们活着的意义是什么"><a href="#我们活着的意义是什么" class="headerlink" title="我们活着的意义是什么"></a>我们活着的意义是什么</h1><p>这个问题我曾经在网络上看到过一个比较不错的答案，那就是看哪种意义可以托举你的灵魂，那么你就遵从哪种活法<br>一共就两种，要么以感官上的享受做活着的依托，要么以奉献付出作为活着的依托。<br>我当时看到这个分法属实有些吃惊，我不知道人还可以如此草率的被分成这么两堆，但是仔细想想真的是这样的。</p><h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="daily" scheme="https://aritz-real.github.io/tags/daily/"/>
+    
+  </entry>
   
   <entry>
     <title>转二进制的python代码样例</title>

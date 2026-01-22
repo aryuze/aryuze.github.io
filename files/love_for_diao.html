@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>
         
-            转二进制的python代码样例 | Aritz.
+             | Aritz.
         
     </title>
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Aritz." type="application/atom+xml">
 </head>
-<body class="post-page">
+<body class="">
 
     <!-- 动态内容切换区 -->
     
@@ -96,7 +96,7 @@
         }
     </style>
 </head>
-<body class="1"> <!--post-page-->
+<body class="1"> <!---->
     
     <!-- 导航栏 -->
     <nav class="navbar">
@@ -113,20 +113,267 @@
     <div class="article-container">
         <!-- 文章头部 -->
 <header class="article-header">
-    <h1 class="article-title">转二进制的python代码样例</h1>
+    <h1 class="article-title"></h1>
     <div class="article-meta">
-        <span>11/04, 2025</span>
+        <span>01/22, 2026</span>
 </header>
 
 <!-- 文章正文 -->
 <article class="article-content">
-    <p>下面是信息考试想用python交作业的同学可以用的参考代码:(开源，自由转发)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">num=int(input())</span><br><span class="line">def calc(n):</span><br><span class="line">    if n == 0: return &quot;&quot;</span><br><span class="line">    return calc(n // 2) + str(n % 2)</span><br><span class="line">binary_str = calc(abs(num)) if abs(num) &gt; 0 else &quot;0&quot;</span><br><span class="line">print(binary_str if num &gt;= 0 else &#x27;-&#x27; + binary_str)</span><br></pre></td></tr></table></figure>
-<p>(这个是精简版，里面用到了递归)<br>如果这个对你来说有些难以理解，还有一个稍微麻烦一点的(递归肯定跑不了了肯定得用):</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">a=int(input())</span><br><span class="line">out=&#x27;&#x27;</span><br><span class="line">def calc(num):</span><br><span class="line">    global out</span><br><span class="line">    if num==1:return 1</span><br><span class="line">    res=str(calc(num//2))</span><br><span class="line">    out=out+res</span><br><span class="line">    return num%2</span><br><span class="line">if a!=0:</span><br><span class="line">    res=str(calc(abs(a)))</span><br><span class="line">    out=out+res</span><br><span class="line">    if a&lt;0: out=&#x27;-&#x27;+out</span><br><span class="line">else: out=0</span><br><span class="line">print(out)</span><br></pre></td></tr></table></figure>
-<p>我个人觉得最好还是越精简越好(有强迫症没办法)</p>
-<p>P.S. 这个题目其实有对应的python内置函数可以一步解决:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(format(int(input()),&#x27;b&#x27;))</span><br></pre></td></tr></table></figure>
+    <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱心表白</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #ff3a5e; /* 红色背景 */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        /* 爱心样式 */
+        .heart-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        
+        @media (max-width: 768px) {
+            .heart-container {
+                width: 250px;
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .heart-container {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        
+        .heart {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            transform: rotate(-45deg);
+            overflow: hidden;
+            border-radius: 15px;
+        }
+        
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .heart:before {
+            top: -50%;
+            left: 0;
+        }
+        
+        .heart:after {
+            top: 0;
+            right: -50%;
+        }
+        
+        /* 爱心内部的照片背景 */
+        .heart-inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform: rotate(45deg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* 默认背景图片 - 您需要替换为您的照片URL */
+            background-image: url('diao.jpg');
+            border-radius: 15px;
+        }
+        
+        /* 文字区域 */
+        .message {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            border-radius: 20px;
+            max-width: 600px;
+            line-height: 1.8;
+            font-size: 1.3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        
+        @media (max-width: 768px) {
+            .message {
+                font-size: 1.1rem;
+                padding: 20px;
+            }
+        }
+        
+        /* 个性化修改提示 */
+        .instructions {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 600px;
+        }
+        
+        .instructions h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .instructions ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 8px;
+        }
+        
+        /* 心跳动画效果 */
+        @keyframes heartbeat {
+            0% { transform: scale(1) rotate(-45deg); }
+            25% { transform: scale(1.2) rotate(-90deg); }
+            50% { transform: scale(1) rotate(-45deg); }
+            75% { transform: scale(1.2) rotate(0deg); }
+            100% { transform: scale(1) rotate(-45deg); }
+        }
+        
+        .heart {
+            animation: heartbeat 5s ease-in-out infinite;
+        }
+        
+        /* 飘落的心形装饰 */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .floating-heart {
+            position: absolute;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.3);
+            animation: float 15s linear infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart-container">
+            <div class="heart">
+                <div class="heart-inner"></div>
+            </div>
+        </div>
+        
+        <div class="message">
+            <p>你是我生命中最美好的遇见，</p>
+            <p>像这爱心一样，我的心中永远有你。</p>
+            <p>无论未来有多少风雨，</p>
+            <p>我都会陪伴在你身边，爱你永远。</p>
+        </div>
+        
+    </div>
+    
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <script>
+        // 生成飘落的心形装饰
+        function createFloatingHearts() {
+            const container = document.getElementById('floatingHearts');
+            const heartCount = 50;
+            const all_words=["刁","❤","爱你刁哥","一见钟情","帅炸了"]
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('floating-heart');
+                heart.innerHTML = all_words[Math.floor(Math.random()*all_words.length)];
+                
+                // 随机位置和动画延迟
+                const left = Math.random() * 100;
+                const delay = Math.random() * 15;
+                const duration = 15 + Math.random() * 10;
+                const size = 15 + Math.random() * 25;
+                
+                heart.style.left = `${left}vw`;
+                heart.style.animationDelay = `${delay}s`;
+                heart.style.animationDuration = `${duration}s`;
+                heart.style.fontSize = `${size}px`;
+                
+                container.appendChild(heart);
+            }
+        }
+        
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            createFloatingHearts();
+        });
+        const heart = document.querySelector('.heart-container');
+            heart.addEventListener('click', function() {
+                this.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 300);
+        });
+    </script>
+</body>
+</html>
 </article>
 
 <!-- 评论系统 -->

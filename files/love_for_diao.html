@@ -115,7 +115,7 @@
 <header class="article-header">
     <h1 class="article-title"></h1>
     <div class="article-meta">
-        <span>01/22, 2026</span>
+        <span>01/24, 2026</span>
 </header>
 
 <!-- 文章正文 -->
@@ -186,28 +186,7 @@
             overflow: hidden;
             border-radius: 15px;
         }
-        
-        .heart:before,
-        .heart:after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: transparent;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-        
-        .heart:before {
-            top: -50%;
-            left: 0;
-        }
-        
-        .heart:after {
-            top: 0;
-            right: -50%;
-        }
-        
+
         /* 爱心内部的照片背景 */
         .heart-inner {
             position: absolute;
@@ -225,6 +204,7 @@
         /* 文字区域 */
         .message {
             background-color: rgba(0, 0, 0, 0.3);
+            color: azure;
             padding: 25px;
             border-radius: 20px;
             max-width: 600px;
@@ -241,30 +221,6 @@
             }
         }
         
-        /* 个性化修改提示 */
-        .instructions {
-            margin-top: 30px;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 15px;
-            border-radius: 10px;
-            max-width: 600px;
-        }
-        
-        .instructions h3 {
-            margin-bottom: 10px;
-            color: #fff;
-        }
-        
-        .instructions ul {
-            text-align: left;
-            padding-left: 20px;
-        }
-        
-        .instructions li {
-            margin-bottom: 8px;
-        }
         
         /* 心跳动画效果 */
         @keyframes heartbeat {
@@ -285,6 +241,7 @@
             top: 0;
             left: 0;
             width: 100%;
+            overflow: hidden;
             height: 100%;
             pointer-events: none;
             z-index: -1;
@@ -292,27 +249,13 @@
         
         .floating-heart {
             position: absolute;
+            overflow: hidden;
             font-size: 20px;
             color: rgba(255, 255, 255, 0.3);
             animation: float 15s linear infinite;
         }
         
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.7;
-            }
-            90% {
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
+        
     </style>
 </head>
 <body>
@@ -335,42 +278,56 @@
     <div class="floating-hearts" id="floatingHearts"></div>
 
     <script>
+        function isElementOutOfViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.bottom < 0 ||                    // 元素在视口上方
+                rect.right < 0 ||                     // 元素在视口左侧
+                rect.left > window.innerWidth ||      // 元素在视口右侧
+                rect.top > window.innerHeight         // 元素在视口下方
+            );
+        }
         // 生成飘落的心形装饰
         function createFloatingHearts() {
             const container = document.getElementById('floatingHearts');
-            const heartCount = 50;
-            const all_words=["刁","❤","爱你刁哥","一见钟情","帅炸了"]
-            for (let i = 0; i < heartCount; i++) {
-                const heart = document.createElement('div');
-                heart.classList.add('floating-heart');
-                heart.innerHTML = all_words[Math.floor(Math.random()*all_words.length)];
-                
-                // 随机位置和动画延迟
-                const left = Math.random() * 100;
-                const delay = Math.random() * 15;
-                const duration = 15 + Math.random() * 10;
-                const size = 15 + Math.random() * 25;
-                
-                heart.style.left = `${left}vw`;
-                heart.style.animationDelay = `${delay}s`;
-                heart.style.animationDuration = `${duration}s`;
-                heart.style.fontSize = `${size}px`;
-                
-                container.appendChild(heart);
+            const count = container.children.length;
+            const heartCount = 100;
+            const all_words=["刁","❤","爱你刁哥","一见钟情","帅炸了","喜欢你的芳香","怎么能这么帅","和我结婚吧","霸气侧漏","刁宝"]
+            if (count<heartCount){
+                for (let i = 0; i < Math.floor(Math.random()*(heartCount-count)/10); i++) {
+                    const heart = document.createElement('div');
+                    heart.classList.add('floating-heart');
+                    heart.innerHTML = all_words[Math.floor(Math.random()*all_words.length)];
+                    
+                    const hei = Math.random() * 100;
+                    const delay = Math.random() * 15;
+                    const duration = 15 + Math.random() * 10;
+                    const size = 15 + Math.random() * 25;
+                    
+                    heart.style.right = "2vw";
+                    heart.style.top = `${hei}vh`;
+                    //heart.style.animationDelay = `${delay}s`;
+                    //heart.style.animationDuration = `${duration}s`;
+                    heart.style.fontSize = `${size}px`;
+                    container.appendChild(heart);
+                }
             }
+            const childs = container.children
+            for (let s=0; s< count; s++){
+                var this_=parseInt(childs[s].style.right)
+                if(this_+1>100) childs[s].style.right=`${this_+1}vw`;
+                else childs[s].style.right=`${this_+1}vw`;
+            }
+            var removal=[]
+            for (let t=0; t< count; t++){
+                if(isElementOutOfViewport(container.children[t])){
+                    removal.push(container.children[t])
+                }
+            }
+            for (let d=0; d< removal.length; d++){container.removeChild(removal[d])}
         }
+        const intervalId = setInterval(createFloatingHearts, 50);
         
-        // 页面加载完成后执行
-        document.addEventListener('DOMContentLoaded', function() {
-            createFloatingHearts();
-        });
-        const heart = document.querySelector('.heart-container');
-            heart.addEventListener('click', function() {
-                this.style.transform = 'scale(1.1)';
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                }, 300);
-        });
     </script>
 </body>
 </html>
